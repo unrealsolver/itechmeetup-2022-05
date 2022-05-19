@@ -2568,12 +2568,13 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
   },
   multiplex: {
     // Example values. To generate your own, see the socket.io server instructions.
-    secret: null, // null so the clients do not have control of the master presentation
+    secret: '16529616488764864544', // null so the clients do not have control of the master presentation
     id: 'bd0e241aeaae44c1', // id, obtained from socket.io server
     url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
   },
   dependencies: [
     { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+    { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
     { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
   ],
   // Learn about plugins: https://revealjs.com/plugins/
