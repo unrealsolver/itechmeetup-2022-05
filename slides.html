@@ -168,11 +168,11 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default, {});
     _exports.default = _default
-})), define("frontend/adapters/bsii-afx-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
+})), define("frontend/adapters/nsf-fs-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
-    class BsiiAfxFactoryPackAdapter extends _application.default {
+    class xddAfxFactoryPackAdapter extends _application.default {
         constructor(...args) {
             var obj, key, value;
             super(...args), t = this, n = "namespace", i = "api/v2", key in obj ? Object.defineProperty(obj, key, {
@@ -183,32 +183,32 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
             }) : obj[key] = value
         }
         pathForType() {
-            return "bsii_afx/factory_packs"
+            return "nsf_fs/factory_packs"
         }
     }
-    _exports.default = BsiiAfxFactoryPackAdapter
-})), define("frontend/adapters/bsii-afx-pack", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
+    _exports.default = xddAfxFactoryPackAdapter
+})), define("frontend/adapters/nsf-fs-pack", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default, {
         namespace: "api/v2",
-        pathForType: () => "bsii_afx/packs"
+        pathForType: () => "nsf_fs/packs"
     });
     _exports.default = _default
-})), define("frontend/adapters/bsii-bank", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
+})), define("frontend/adapters/xdd-bank", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default);
     _exports.default = _default
-})), define("frontend/adapters/bsii-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
+})), define("frontend/adapters/xdd-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend({
         namespace: "api/v2",
-        pathForType: () => "bsii/factory_packs"
+        pathForType: () => "xdd/factory_packs"
     });
     _exports.default = _default
 }))
@@ -247,11 +247,11 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default, {});
     _exports.default = _default
-})), define("frontend/adapters/bsii-afx-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
+})), define("frontend/adapters/nsf-fs-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
-    class BsiiAfxFactoryPackAdapter extends _application.default {
+    class xddAfxFactoryPackAdapter extends _application.default {
         constructor(...args) {
             var obj, key, value;
             super(...args), t = this, n = "namespace", i = "api/v2", key in obj ? Object.defineProperty(obj, key, {
@@ -262,32 +262,32 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
             }) : obj[key] = value
         }
         pathForType() {
-            return "bsii_afx/factory_packs"
+            return "nsf_fs/factory_packs"
         }
     }
-    _exports.default = BsiiAfxFactoryPackAdapter
-})), define("frontend/adapters/bsii-afx-pack", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
+    _exports.default = xddAfxFactoryPackAdapter
+})), define("frontend/adapters/nsf-fs-pack", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default, {
         namespace: "api/v2",
-        pathForType: () => "bsii_afx/packs"
+        pathForType: () => "nsf_fs/packs"
     });
     _exports.default = _default
-})), define("frontend/adapters/bsii-bank", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
+})), define("frontend/adapters/xdd-bank", ["exports", "frontend/adapters/application", "frontend/mixins/form-data-adapter"], (function (_exports, _application, _formDataAdapter) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend(_formDataAdapter.default);
     _exports.default = _default
-})), define("frontend/adapters/bsii-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
+})), define("frontend/adapters/xdd-factory-pack", ["exports", "frontend/adapters/application"], (function (_exports, _application) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
     }), _exports.default = void 0;
     var _default = _application.default.extend({
         namespace: "api/v2",
-        pathForType: () => "bsii/factory_packs"
+        pathForType: () => "xdd/factory_packs"
     });
     _exports.default = _default
 }))
@@ -340,38 +340,38 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 ├── adapters
 │   ├── application.js
 │   ├── backup.js
-│   ├── bsii-afx-factory-pack.js
-│   ├── bsii-afx-pack.js
-│   ├── bsii-bank.js
-│   ├── bsii-factory-pack.js
-│   ├── bsii-pack.js
-│   ├── circuit-patch.js
-│   ├── circuit-rhythm-factory-pack.js
-│   ├── circuit-rhythm-pack.js
-│   ├── circuit-tracks-factory-pack.js
-│   ├── circuit-tracks-midi-template-factory-pack.js
-│   ├── circuit-tracks-midi-template-pack.js
-│   ├── circuit-tracks-pack.js
-│   ├── circuit-tracks-patch-factory-pack.js
-│   ├── circuit-tracks-patch-pack.js
+│   ├── xddi-spf-factory-pack.js
+│   ├── xddi-spf-pack.js
+│   ├── xddi-bank.js
+│   ├── xddi-factory-pack.js
+│   ├── xddi-pack.js
+│   ├── thing-patch.js
+│   ├── thing-rhythm-factory-pack.js
+│   ├── thing-rhythm-pack.js
+│   ├── thing-tracks-factory-pack.js
+│   ├── thing-tracks-midi-template-factory-pack.js
+│   ├── thing-tracks-midi-template-pack.js
+│   ├── thing-tracks-pack.js
+│   ├── thing-tracks-patch-factory-pack.js
+│   ├── thing-tracks-patch-pack.js
 │   ├── form-data.js
 │   ├── -json-api.js
-│   ├── launch-control-mk1-factory-pack.js
-│   ├── launch-control-mk1-pack.js
-│   ├── launch-control-xl-mk2-factory-pack.js
-│   ├── launch-control-xl-mk2-pack.js
-│   ├── launchkey-mini-mk3-factory-pack.js
-│   ├── launchkey-mini-mk3-pack.js
-│   ├── launchkey-mk3-factory-pack.js
-│   ├── launchkey-mk3-pack.js
-│   ├── launchpad-mini-mk3-factory-pack.js
-│   ├── launchpad-mini-mk3-pack.js
-│   ├── launchpad-pro-mk3-custom-mode-factory-pack.js
-│   ├── launchpad-pro-mk3-custom-mode-pack.js
-│   ├── launchpad-pro-mk3-project-factory-pack.js
-│   ├── launchpad-pro-mk3-project-pack.js
-│   ├── launchpad-x-factory-pack.js
-│   ├── launchpad-x-pack.js
+│   ├── emerge-control-mk1-factory-pack.js
+│   ├── emerge-control-mk1-pack.js
+│   ├── emerge-control-xl-mk2-factory-pack.js
+│   ├── emerge-control-xl-mk2-pack.js
+│   ├── someobj-mini-mk3-factory-pack.js
+│   ├── someobj-mini-mk3-pack.js
+│   ├── someobj-mk3-factory-pack.js
+│   ├── someobj-mk3-pack.js
+│   ├── otherobj-mini-mk3-factory-pack.js
+│   ├── otherobj-mini-mk3-pack.js
+│   ├── otherobj-pro-mk3-custom-mode-factory-pack.js
+│   ├── otherobj-pro-mk3-custom-mode-pack.js
+│   ├── otherobj-pro-mk3-project-factory-pack.js
+│   ├── otherobj-pro-mk3-project-pack.js
+│   ├── otherobj-x-factory-pack.js
+│   ├── otherobj-x-pack.js
 │   ├── monostation-pack.js
 │   ├── patch-set.js
 │   ├── peak-factory-pack.js
@@ -381,8 +381,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── sl-mkiii-pack.js
 │   ├── sl-mkiii-template-factory-pack.js
 │   ├── sl-mkiii-template-pack.js
-│   ├── summit-factory-pack.js
-│   ├── summit-pack.js
+│   ├── marine-factory-pack.js
+│   ├── marine-pack.js
 │   ├── wavetable-factory-pack.js
 │   ├── wavetable-pack.js
 │   ├── wavetable-samples-sample-category.js
@@ -402,16 +402,16 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── bank-chooser.js
 │   ├── bar-slider.js
 │   ├── bass-station-ii
-│   │   ├── afx-bank-select.js
-│   │   ├── afx-editor.js
-│   │   ├── afx-editor-sidebar.js
-│   │   ├── afx-env-controls.js
-│   │   ├── afx-lfo-controls.js
-│   │   ├── afx-osc-controls.js
-│   │   ├── afx-output-controls.js
-│   │   ├── afx-overlay-details.js
-│   │   ├── afx-overlay-key.js
-│   │   ├── afx-tuning-controls.js
+│   │   ├── spf-bank-select.js
+│   │   ├── spf-editor.js
+│   │   ├── spf-editor-sidebar.js
+│   │   ├── spf-env-controls.js
+│   │   ├── spf-lfo-controls.js
+│   │   ├── spf-osc-controls.js
+│   │   ├── spf-output-controls.js
+│   │   ├── spf-overlay-details.js
+│   │   ├── spf-overlay-key.js
+│   │   ├── spf-tuning-controls.js
 │   │   ├── custom-message-input.js
 │   │   ├── device-setup.js
 │   │   ├── menu.js
@@ -443,7 +443,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── category-select.js
 │   ├── check-box.js
 │   ├── checkbox-toggle.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── device-setup.js
 │   │   ├── macro-assignment-container.js
 │   │   ├── menu.js
@@ -451,26 +451,26 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── mod-destination.js
 │   │   ├── packs-sidebar.js
 │   │   └── synth-editor.js
-│   ├── circuit-box.js
-│   ├── circuit-env-settings.js
-│   ├── circuit-eq-settings.js
-│   ├── circuit-filter-settings.js
-│   ├── circuit-fx-distortion.js
-│   ├── circuit-fx-settings.js
-│   ├── circuit-gen2
+│   ├── thing-box.js
+│   ├── thing-env-settings.js
+│   ├── thing-eq-settings.js
+│   ├── thing-filter-settings.js
+│   ├── thing-fx-distortion.js
+│   ├── thing-fx-settings.js
+│   ├── thing-gen2
 │   │   ├── select-entity.js
 │   │   └── send-set-to-device.js
-│   ├── circuit-lfo-settings.js
-│   ├── circuit-lfo-table-display.js
-│   ├── circuit-macro-controls.js
-│   ├── circuit-macro-settings.js
-│   ├── circuit-mixer-settings.js
-│   ├── circuit-mod-matrix-destination-icon.js
-│   ├── circuit-mod-matrix-source-icon.js
-│   ├── circuit-osc-settings.js
-│   ├── circuit-patch-chooser.js
-│   ├── circuit-rate-knob.js
-│   ├── circuit-rhythm
+│   ├── thing-lfo-settings.js
+│   ├── thing-lfo-table-display.js
+│   ├── thing-macro-controls.js
+│   ├── thing-macro-settings.js
+│   ├── thing-mixer-settings.js
+│   ├── thing-mod-matrix-destination-icon.js
+│   ├── thing-mod-matrix-source-icon.js
+│   ├── thing-osc-settings.js
+│   ├── thing-patch-chooser.js
+│   ├── thing-rate-knob.js
+│   ├── thing-rhythm
 │   │   ├── device-setup.js
 │   │   ├── get-pack.js
 │   │   ├── grid-effect-autofilter.js
@@ -488,7 +488,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── phaser-rate-knob.js
 │   │   ├── single-entity-content-transfer.js
 │   │   └── vinyl-filter-graph.js
-│   ├── circuit-tracks
+│   ├── thing-tracks
 │   │   ├── device-setup.js
 │   │   ├── get-pack.js
 │   │   ├── get-patch.js
@@ -498,8 +498,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── save-patch-dialog.js
 │   │   ├── session-compatibility-warning.js
 │   │   └── single-entity-content-transfer.js
-│   ├── circuit-voice-settings.js
-│   ├── circuit-wavetable-display.js
+│   ├── thing-voice-settings.js
+│   ├── thing-wavetable-display.js
 │   ├── color-picker-item.js
 │   ├── color-picker-mobile.js
 │   ├── control-image.js
@@ -557,21 +557,21 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── knob.js
 │   ├── knob-svg.js
 │   ├── labelled-value.js
-│   ├── launch-control
+│   ├── emerge-control
 │   │   ├── template-select-modal.js
 │   │   └── template-settings.js
-│   ├── launch-control-button.js
-│   ├── launch-control-fader.js
-│   ├── launch-control-mk1
+│   ├── emerge-control-button.js
+│   ├── emerge-control-fader.js
+│   ├── emerge-control-mk1
 │   │   ├── device-setup.js
 │   │   └── menu.js
-│   ├── launch-control-mk1.js
-│   ├── launch-control-pot.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-mk1.js
+│   ├── emerge-control-pot.js
+│   ├── emerge-control-xl-mk2
 │   │   ├── device-setup.js
 │   │   └── menu.js
-│   ├── launch-control-xl-mk2.js
-│   ├── launchkey-mini-mk3
+│   ├── emerge-control-xl-mk2.js
+│   ├── someobj-mini-mk3
 │   │   ├── device-setup.js
 │   │   ├── display-reboot-message.js
 │   │   ├── menu.js
@@ -582,7 +582,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── reset-custom-mode-warning-modal.js
 │   │   ├── sustain-pedal.js
 │   │   └── template-editor.js
-│   ├── launchkey-mk3
+│   ├── someobj-mk3
 │   │   ├── control.js
 │   │   ├── custom-mode-control-settings.js
 │   │   ├── custom-mode-select.js
@@ -594,24 +594,24 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── pedal-settings.js
 │   │   ├── pots.js
 │   │   └── select-custom-mode-type.js
-│   ├── launchpad-global-settings.js
-│   ├── launchpad-grid.js
-│   ├── launchpad.js
-│   ├── launchpad-meta-object.js
-│   ├── launchpad-mini-mk3
+│   ├── otherobj-global-settings.js
+│   ├── otherobj-grid.js
+│   ├── otherobj.js
+│   ├── otherobj-meta-object.js
+│   ├── otherobj-mini-mk3
 │   │   ├── device-setup.js
 │   │   └── menu.js
-│   ├── launchpad-mini-mk3.js
-│   ├── launchpad-pad.js
-│   ├── launchpad-project-settings.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-mini-mk3.js
+│   ├── otherobj-pad.js
+│   ├── otherobj-project-settings.js
+│   ├── otherobj-pro-mk3
 │   │   ├── device-setup.js
 │   │   └── menu.js
-│   ├── launchpad-pro-mk3.js
-│   ├── launchpad-pro-mk3-projects.js
-│   ├── launchpad-widget-browser.js
-│   ├── launchpad-widget.js
-│   ├── launchpad-widgets
+│   ├── otherobj-pro-mk3.js
+│   ├── otherobj-pro-mk3-projects.js
+│   ├── otherobj-widget-browser.js
+│   ├── otherobj-widget.js
+│   ├── otherobj-widgets
 │   │   ├── chromatic-keyboard.js
 │   │   ├── color-picker.js
 │   │   ├── control-change.js
@@ -625,9 +625,9 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── program-change.js
 │   │   ├── scale-keyboard.js
 │   │   └── scale-select.js
-│   ├── launchpad-widget-settings.js
-│   ├── launchpad-widgets.js
-│   ├── launchpad-x
+│   ├── otherobj-widget-settings.js
+│   ├── otherobj-widgets.js
+│   ├── otherobj-x
 │   │   ├── device-setup.js
 │   │   └── menu.js
 │   ├── librarian
@@ -738,7 +738,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── start-firmware-svg.js
 │   ├── step-sequencer.js
 │   ├── sub-nav.js
-│   ├── summit
+│   ├── marine
 │   │   ├── device-setup.js
 │   │   └── menu.js
 │   ├── svg-circle.js
@@ -771,14 +771,14 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   └── environment.js
 ├── constants
 │   ├── bass-station-ii
-│   │   ├── afx-overlay-midi-config.js
-│   │   ├── afx-overlay-midi-messages.js
+│   │   ├── spf-overlay-midi-config.js
+│   │   ├── spf-overlay-midi-messages.js
 │   │   ├── content-transfer.js
 │   │   ├── firmware-versions.js
 │   │   ├── init-patch.js
 │   │   └── seven-segment-character-map.js
 │   ├── button-colors.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── init-patch.js
 │   │   ├── macro-destinations.js
 │   │   ├── modulation-destinations.js
@@ -786,35 +786,35 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── osc-waveforms.js
 │   │   ├── patch-categories.js
 │   │   └── patch-genres.js
-│   ├── circuit-editor-help-pages.js
-│   ├── circuit-firmware-versions.js
-│   ├── circuit-gen2
+│   ├── thing-editor-help-pages.js
+│   ├── thing-firmware-versions.js
+│   ├── thing-gen2
 │   │   ├── content-transfer.js
 │   │   └── pad-colors.js
-│   ├── circuit-patch-midi-messages.js
-│   ├── circuit-rhythm
+│   ├── thing-patch-midi-messages.js
+│   ├── thing-rhythm
 │   │   └── grid-effects.js
-│   ├── circuit-session-colors.js
+│   ├── thing-session-colors.js
 │   ├── devices.js
 │   ├── downloads.js
 │   ├── driver-links.js
 │   ├── file-types.js
-│   ├── launch-control
+│   ├── emerge-control
 │   │   ├── note-octaves.js
 │   │   ├── note-roots.js
 │   │   └── pot-colors.js
-│   ├── launch-control-mk1
+│   ├── emerge-control-mk1
 │   │   └── init-template.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-xl-mk2
 │   │   └── init-template.js
-│   ├── launchkey-mini-mk3
+│   ├── someobj-mini-mk3
 │   │   ├── init-template.js
 │   │   └── pad-colors.js
-│   ├── launchkey-mk3
+│   ├── someobj-mk3
 │   │   ├── control-types.js
 │   │   ├── pad-colors.js
 │   │   └── presets.js
-│   ├── launchpad
+│   ├── otherobj
 │   │   ├── pad-colors.js
 │   │   ├── project-colors.js
 │   │   └── scales.js
@@ -835,19 +835,19 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── midi-channels.js
 │   │   ├── session-colors.js
 │   │   └── sysex-formats.js
-│   └── summit
+│   └── marine
 │       ├── init-multi.js
 │       └── init-single.js
 ├── controllers
 │   ├── account.js
 │   ├── application.js
 │   ├── bass-station-ii
-│   │   ├── afx-mode
+│   │   ├── spf-mode
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
 │   │   │   ├── new.js
 │   │   │   └── pack.js
-│   │   ├── afx-mode.js
+│   │   ├── spf-mode.js
 │   │   ├── custom-message.js
 │   │   ├── firmware.js
 │   │   ├── librarian
@@ -858,15 +858,15 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── librarian.js
 │   │   └── tuning-table-editor.js
 │   ├── bass-station-ii.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── editor.js
 │   │   ├── factory-pack.js
 │   │   ├── factory-pack-loading.js
 │   │   ├── firmware.js
 │   │   ├── new-pack.js
 │   │   └── pack.js
-│   ├── circuit.js
-│   ├── circuit-rhythm
+│   ├── thing.js
+│   ├── thing-rhythm
 │   │   ├── firmware.js
 │   │   ├── packs
 │   │   │   ├── factory-pack.js
@@ -874,8 +874,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── packs.js
-│   ├── circuit-rhythm.js
-│   ├── circuit-tracks
+│   ├── thing-rhythm.js
+│   ├── thing-tracks
 │   │   ├── firmware.js
 │   │   ├── midi-templates
 │   │   │   ├── factory-pack.js
@@ -893,8 +893,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── editor.js
 │   │   │   └── index.js
 │   │   └── synth.js
-│   ├── circuit-tracks.js
-│   ├── launch-control-mk1
+│   ├── thing-tracks.js
+│   ├── emerge-control-mk1
 │   │   ├── firmware.js
 │   │   ├── templates
 │   │   │   ├── factory-pack.js
@@ -902,8 +902,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-mk1.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-mk1.js
+│   ├── emerge-control-xl-mk2
 │   │   ├── firmware.js
 │   │   ├── templates
 │   │   │   ├── factory-pack.js
@@ -911,8 +911,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-xl-mk2.js
-│   ├── launchkey-mini-mk3
+│   ├── emerge-control-xl-mk2.js
+│   ├── someobj-mini-mk3
 │   │   ├── custom-mode-editor
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -920,8 +920,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   └── pack.js
 │   │   ├── custom-mode-editor.js
 │   │   └── firmware.js
-│   ├── launchkey-mini-mk3.js
-│   ├── launchkey-mk3
+│   ├── someobj-mini-mk3.js
+│   ├── someobj-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -930,8 +930,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── custom-modes.js
 │   │   ├── firmware.js
 │   │   └── pedal.js
-│   ├── launchkey-mk3.js
-│   ├── launchpad-mini-mk3
+│   ├── someobj-mk3.js
+│   ├── otherobj-mini-mk3
 │   │   ├── firmware.js
 │   │   ├── librarian
 │   │   │   ├── factory-pack.js
@@ -939,8 +939,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-mini-mk3.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-mini-mk3.js
+│   ├── otherobj-pro-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -954,8 +954,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── projects.js
-│   ├── launchpad-pro-mk3.js
-│   ├── launchpad-x
+│   ├── otherobj-pro-mk3.js
+│   ├── otherobj-x
 │   │   ├── firmware.js
 │   │   ├── librarian
 │   │   │   ├── factory-pack.js
@@ -963,7 +963,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-x.js
+│   ├── otherobj-x.js
 │   ├── monostation
 │   │   ├── factory-pack.js
 │   │   ├── factory-pack-loading.js
@@ -1002,7 +1002,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   └── pack.js
 │   │   └── template-editor.js
 │   ├── sl-mkiii.js
-│   ├── summit
+│   ├── marine
 │   │   ├── firmware.js
 │   │   ├── librarian
 │   │   │   ├── factory-pack.js
@@ -1019,7 +1019,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── wavetable-editor.js
-│   ├── summit.js
+│   ├── marine.js
 │   └── welcome.js
 ├── data-adapter.js
 ├── formats.js
@@ -1061,7 +1061,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── is-empty.js
 │   ├── is-equal.js
 │   ├── is-selected.js
-│   ├── launchkey-mk3
+│   ├── someobj-mk3
 │   │   └── pad-color.js
 │   ├── leading-zeroes.js
 │   ├── loc.js
@@ -1117,11 +1117,11 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── setup-routes.js
 │   └── walk-providers.js
 ├── mixins
-│   ├── bsii-afx-load-pack.js
-│   ├── bsii-load-pack.js
-│   ├── circuit-rhythm
+│   ├── xddi-spf-load-pack.js
+│   ├── xddi-load-pack.js
+│   ├── thing-rhythm
 │   │   └── load-pack.js
-│   ├── circuit-tracks
+│   ├── thing-tracks
 │   │   ├── load-pack.js
 │   │   ├── midi-template-load-pack.js
 │   │   └── patch-load-pack.js
@@ -1131,12 +1131,12 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── device-setup.js
 │   ├── error-messages.js
 │   ├── form-data-adapter.js
-│   ├── launch-control-mk1-load-pack.js
-│   ├── launch-control-xl-mk2-load-pack.js
-│   ├── launchkey-mini-mk3-load-pack.js
-│   ├── launchkey-mk3-load-pack.js
-│   ├── launchpad-load-pack.js
-│   ├── launchpad-pro-mk3-project-load-pack.js
+│   ├── emerge-control-mk1-load-pack.js
+│   ├── emerge-control-xl-mk2-load-pack.js
+│   ├── someobj-mini-mk3-load-pack.js
+│   ├── someobj-mk3-load-pack.js
+│   ├── otherobj-load-pack.js
+│   ├── otherobj-pro-mk3-project-load-pack.js
 │   ├── loading-controller.js
 │   ├── monostation-pack-actions.js
 │   ├── navigation-guard.js
@@ -1149,37 +1149,37 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   └── bit-depth-checks.js
 │   ├── sl-mkiii-load-pack.js
 │   ├── sl-mkiii-template-load-pack.js
-│   ├── summit-load-pack.js
+│   ├── marine-load-pack.js
 │   ├── universal-factory-pack-model.js
 │   ├── universal-pack-model.js
 │   └── wavetable-load-pack.js
 ├── models
 │   ├── backup.js
 │   ├── bass-station-ii
-│   │   ├── afx-bank.js
-│   │   ├── afx-overlay.js
+│   │   ├── spf-bank.js
+│   │   ├── spf-overlay.js
 │   │   ├── bank.js
 │   │   └── patch.js
-│   ├── bsii-afx-factory-pack.js
-│   ├── bsii-afx-pack.js
-│   ├── bsii-factory-pack.js
-│   ├── bsii-pack.js
+│   ├── xddi-spf-factory-pack.js
+│   ├── xddi-spf-pack.js
+│   ├── xddi-factory-pack.js
+│   ├── xddi-pack.js
 │   ├── byte-buffer.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── patch.js
 │   │   └── settings.js
-│   ├── circuit-gen2
+│   ├── thing-gen2
 │   │   ├── entity.js
 │   │   ├── entity-set.js
 │   │   ├── pack-metadata.js
 │   │   ├── project.js
 │   │   ├── sample.js
 │   │   └── samples.js
-│   ├── circuit-macro-slot.js
-│   ├── circuit-macro-sub-slot.js
-│   ├── circuit-modulation-matrix-slot.js
-│   ├── circuit-patch.js
-│   ├── circuit-rhythm
+│   ├── thing-macro-slot.js
+│   ├── thing-macro-sub-slot.js
+│   ├── thing-modulation-matrix-slot.js
+│   ├── thing-patch.js
+│   ├── thing-rhythm
 │   │   ├── grid-effect.js
 │   │   ├── grid-effects.js
 │   │   ├── project.js
@@ -1187,9 +1187,9 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── sample.js
 │   │   ├── samples.js
 │   │   └── settings.js
-│   ├── circuit-rhythm-factory-pack.js
-│   ├── circuit-rhythm-pack.js
-│   ├── circuit-tracks
+│   ├── thing-rhythm-factory-pack.js
+│   ├── thing-rhythm-pack.js
+│   ├── thing-tracks
 │   │   ├── entity.js
 │   │   ├── macro.js
 │   │   ├── macros.js
@@ -1204,38 +1204,38 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── sample.js
 │   │   ├── samples.js
 │   │   └── settings.js
-│   ├── circuit-tracks-factory-pack.js
-│   ├── circuit-tracks-midi-template-factory-pack.js
-│   ├── circuit-tracks-midi-template-pack.js
-│   ├── circuit-tracks-pack.js
-│   ├── circuit-tracks-patch-factory-pack.js
-│   ├── circuit-tracks-patch-pack.js
+│   ├── thing-tracks-factory-pack.js
+│   ├── thing-tracks-midi-template-factory-pack.js
+│   ├── thing-tracks-midi-template-pack.js
+│   ├── thing-tracks-pack.js
+│   ├── thing-tracks-patch-factory-pack.js
+│   ├── thing-tracks-patch-pack.js
 │   ├── download-process.js
 │   ├── factory-pack.js
 │   ├── firmware-process.js
 │   ├── identity.js
-│   ├── launch-control-mk1
+│   ├── emerge-control-mk1
 │   │   └── template.js
-│   ├── launch-control-mk1-factory-pack.js
-│   ├── launch-control-mk1-pack.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-mk1-factory-pack.js
+│   ├── emerge-control-mk1-pack.js
+│   ├── emerge-control-xl-mk2
 │   │   └── template.js
-│   ├── launch-control-xl-mk2-factory-pack.js
-│   ├── launch-control-xl-mk2-pack.js
-│   ├── launchkey-mini-mk3
+│   ├── emerge-control-xl-mk2-factory-pack.js
+│   ├── emerge-control-xl-mk2-pack.js
+│   ├── someobj-mini-mk3
 │   │   └── template.js
-│   ├── launchkey-mini-mk3-factory-pack.js
-│   ├── launchkey-mini-mk3-pack.js
-│   ├── launchkey-mk3
+│   ├── someobj-mini-mk3-factory-pack.js
+│   ├── someobj-mini-mk3-pack.js
+│   ├── someobj-mk3
 │   │   ├── base-surface.js
 │   │   ├── control.js
 │   │   ├── fader-surface.js
 │   │   ├── pad-surface.js
 │   │   ├── pedal-surface.js
 │   │   └── pot-surface.js
-│   ├── launchkey-mk3-factory-pack.js
-│   ├── launchkey-mk3-pack.js
-│   ├── launchpad
+│   ├── someobj-mk3-factory-pack.js
+│   ├── someobj-mk3-pack.js
+│   ├── otherobj
 │   │   ├── meta-objects
 │   │   │   ├── chromatic-keyboard.js
 │   │   │   ├── control-change.js
@@ -1247,16 +1247,16 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   └── scale-keyboard.js
 │   │   ├── pad.js
 │   │   └── template.js
-│   ├── launchpad-mini-mk3-factory-pack.js
-│   ├── launchpad-mini-mk3-pack.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-mini-mk3-factory-pack.js
+│   ├── otherobj-mini-mk3-pack.js
+│   ├── otherobj-pro-mk3
 │   │   └── project.js
-│   ├── launchpad-pro-mk3-custom-mode-factory-pack.js
-│   ├── launchpad-pro-mk3-custom-mode-pack.js
-│   ├── launchpad-pro-mk3-project-factory-pack.js
-│   ├── launchpad-pro-mk3-project-pack.js
-│   ├── launchpad-x-factory-pack.js
-│   ├── launchpad-x-pack.js
+│   ├── otherobj-pro-mk3-custom-mode-factory-pack.js
+│   ├── otherobj-pro-mk3-custom-mode-pack.js
+│   ├── otherobj-pro-mk3-project-factory-pack.js
+│   ├── otherobj-pro-mk3-project-pack.js
+│   ├── otherobj-x-factory-pack.js
+│   ├── otherobj-x-pack.js
 │   ├── monostation-factory-pack.js
 │   ├── monostation-pack.js
 │   ├── monostation-patch.js
@@ -1284,11 +1284,11 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── sl-mkiii-pack.js
 │   ├── sl-mkiii-template-factory-pack.js
 │   ├── sl-mkiii-template-pack.js
-│   ├── summit
+│   ├── marine
 │   │   ├── multi-patch.js
 │   │   └── patch.js
-│   ├── summit-factory-pack.js
-│   ├── summit-pack.js
+│   ├── marine-factory-pack.js
+│   ├── marine-pack.js
 │   ├── tuning-table.js
 │   ├── upload-process.js
 │   ├── wave.js
@@ -1317,7 +1317,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   └── will-destroy.js
 ├── processes
 │   ├── bass-station-ii
-│   │   ├── afx
+│   │   ├── spf
 │   │   │   ├── get-pack.js
 │   │   │   ├── send-overlay.js
 │   │   │   └── send-pack.js
@@ -1325,7 +1325,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── push.js
 │   │   ├── update-default-overlays.js
 │   │   └── update-tuning-tables.js
-│   ├── circuit-gen2
+│   ├── thing-gen2
 │   │   ├── content-transfer
 │   │   │   ├── fetch-content.js
 │   │   │   ├── fetch.js
@@ -1337,9 +1337,9 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── push.js
 │   │   │   └── rename-content.js
 │   │   └── content-transfer.js
-│   ├── circuit-rhythm
+│   ├── thing-rhythm
 │   │   └── live-preview.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-pro-mk3
 │   │   └── projects
 │   │       ├── download-project.js
 │   │       ├── fetch.js
@@ -1349,7 +1349,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── sl-mkiii
 │   │   ├── fetch.js
 │   │   └── push.js
-│   ├── summit-fetch.js
+│   ├── marine-fetch.js
 │   └── wavetable
 │       └── fetch.js
 ├── resolver.js
@@ -1358,12 +1358,12 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── account.js
 │   ├── application.js
 │   ├── bass-station-ii
-│   │   ├── afx-mode
+│   │   ├── spf-mode
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
 │   │   │   ├── new.js
 │   │   │   └── pack.js
-│   │   ├── afx-mode.js
+│   │   ├── spf-mode.js
 │   │   ├── custom-message.js
 │   │   ├── firmware.js
 │   │   ├── help.js
@@ -1376,7 +1376,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── librarian.js
 │   │   └── tuning-table-editor.js
 │   ├── bass-station-ii.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── editor.js
 │   │   ├── factory-pack.js
 │   │   ├── firmware.js
@@ -1385,8 +1385,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── macro-editor.js
 │   │   ├── new-pack.js
 │   │   └── pack.js
-│   ├── circuit.js
-│   ├── circuit-rhythm
+│   ├── thing.js
+│   ├── thing-rhythm
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1395,8 +1395,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── packs.js
-│   ├── circuit-rhythm.js
-│   ├── circuit-tracks
+│   ├── thing-rhythm.js
+│   ├── thing-tracks
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1413,8 +1413,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── synth
 │   │   │   └── editor.js
 │   │   └── synth.js
-│   ├── circuit-tracks.js
-│   ├── launch-control-mk1
+│   ├── thing-tracks.js
+│   ├── emerge-control-mk1
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1424,8 +1424,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-mk1.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-mk1.js
+│   ├── emerge-control-xl-mk2
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1435,8 +1435,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-xl-mk2.js
-│   ├── launchkey-mini-mk3
+│   ├── emerge-control-xl-mk2.js
+│   ├── someobj-mini-mk3
 │   │   ├── custom-mode-editor
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -1446,8 +1446,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   └── index.js
-│   ├── launchkey-mini-mk3.js
-│   ├── launchkey-mk3
+│   ├── someobj-mini-mk3.js
+│   ├── someobj-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -1458,8 +1458,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── help.js
 │   │   ├── index.js
 │   │   └── pedal.js
-│   ├── launchkey-mk3.js
-│   ├── launchpad-mini-mk3
+│   ├── someobj-mk3.js
+│   ├── otherobj-mini-mk3
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1469,8 +1469,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-mini-mk3.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-mini-mk3.js
+│   ├── otherobj-pro-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -1486,8 +1486,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── projects.js
-│   ├── launchpad-pro-mk3.js
-│   ├── launchpad-x
+│   ├── otherobj-pro-mk3.js
+│   ├── otherobj-x
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1497,7 +1497,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-x.js
+│   ├── otherobj-x.js
 │   ├── login-callback.js
 │   ├── monostation
 │   │   ├── factory-pack.js
@@ -1543,7 +1543,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   └── pack.js
 │   │   └── template-editor.js
 │   ├── sl-mkiii.js
-│   ├── summit
+│   ├── marine
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -1562,7 +1562,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── new.js
 │   │   │   └── pack.js
 │   │   └── wavetable-editor.js
-│   ├── summit.js
+│   ├── marine.js
 │   └── welcome.js
 ├── serializers
 │   ├── application.js
@@ -1570,27 +1570,27 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── -json-api.js
 │   └── -rest.js
 ├── services
-│   ├── circuit-lfo-table-cache.js
-│   ├── circuit-wavetable-cache.js
+│   ├── thing-lfo-table-cache.js
+│   ├── thing-wavetable-cache.js
 │   ├── confirmation.js
 │   ├── content-version.js
 │   ├── devices
 │   │   ├── bass-station-ii.js
-│   │   ├── circuit.js
-│   │   ├── circuit-rhythm.js
-│   │   ├── circuit-tracks.js
+│   │   ├── thing.js
+│   │   ├── thing-rhythm.js
+│   │   ├── thing-tracks.js
 │   │   ├── device.js
-│   │   ├── launch-control-mk1.js
-│   │   ├── launch-control-xl-mk2.js
-│   │   ├── launchkey-mini-mk3.js
-│   │   ├── launchkey-mk3.js
-│   │   ├── launchpad-mini-mk3.js
-│   │   ├── launchpad-pro-mk3.js
-│   │   ├── launchpad-x.js
+│   │   ├── emerge-control-mk1.js
+│   │   ├── emerge-control-xl-mk2.js
+│   │   ├── someobj-mini-mk3.js
+│   │   ├── someobj-mk3.js
+│   │   ├── otherobj-mini-mk3.js
+│   │   ├── otherobj-pro-mk3.js
+│   │   ├── otherobj-x.js
 │   │   ├── monostation.js
 │   │   ├── peak.js
 │   │   ├── sl-mkiii.js
-│   │   └── summit.js
+│   │   └── marine.js
 │   ├── device-status.js
 │   ├── -ea-motion.js
 │   ├── electron-menu.js
@@ -1627,10 +1627,10 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   ├── account.js
 │   ├── application.js
 │   ├── bass-station-ii
-│   │   ├── afx-mode
+│   │   ├── spf-mode
 │   │   │   ├── index.js
 │   │   │   └── pack.js
-│   │   ├── afx-mode.js
+│   │   ├── spf-mode.js
 │   │   ├── custom-message.js
 │   │   ├── firmware.js
 │   │   ├── help.js
@@ -1643,7 +1643,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── librarian.js
 │   │   └── tuning-table-editor.js
 │   ├── bass-station-ii.js
-│   ├── circuit
+│   ├── thing
 │   │   ├── editor.js
 │   │   ├── factory-pack.js
 │   │   ├── factory-pack-loading.js
@@ -1652,8 +1652,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── index.js
 │   │   ├── new-pack-loading.js
 │   │   └── pack.js
-│   ├── circuit.js
-│   ├── circuit-rhythm
+│   ├── thing.js
+│   ├── thing-rhythm
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── packs
@@ -1662,8 +1662,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── loading.js
 │   │   │   └── pack.js
 │   │   └── packs.js
-│   ├── circuit-rhythm.js
-│   ├── circuit-tracks
+│   ├── thing-rhythm.js
+│   ├── thing-tracks
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── midi-templates
@@ -1681,23 +1681,23 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── editor.js
 │   │   │   └── index.js
 │   │   └── synth.js
-│   ├── circuit-tracks.js
+│   ├── thing-tracks.js
 │   ├── components
 │   │   ├── auth-widget.js
 │   │   ├── bank-and-patch-chooser.js
 │   │   ├── bank-chooser.js
 │   │   ├── bar-slider.js
 │   │   ├── bass-station-ii
-│   │   │   ├── afx-bank-select.js
-│   │   │   ├── afx-editor.js
-│   │   │   ├── afx-editor-sidebar.js
-│   │   │   ├── afx-env-controls.js
-│   │   │   ├── afx-lfo-controls.js
-│   │   │   ├── afx-osc-controls.js
-│   │   │   ├── afx-output-controls.js
-│   │   │   ├── afx-overlay-details.js
-│   │   │   ├── afx-overlay-key.js
-│   │   │   ├── afx-tuning-controls.js
+│   │   │   ├── spf-bank-select.js
+│   │   │   ├── spf-editor.js
+│   │   │   ├── spf-editor-sidebar.js
+│   │   │   ├── spf-env-controls.js
+│   │   │   ├── spf-lfo-controls.js
+│   │   │   ├── spf-osc-controls.js
+│   │   │   ├── spf-output-controls.js
+│   │   │   ├── spf-overlay-details.js
+│   │   │   ├── spf-overlay-key.js
+│   │   │   ├── spf-tuning-controls.js
 │   │   │   ├── device-setup.js
 │   │   │   ├── menu.js
 │   │   │   └── seven-segment-display.js
@@ -1728,7 +1728,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── category-select.js
 │   │   ├── check-box.js
 │   │   ├── checkbox-toggle.js
-│   │   ├── circuit
+│   │   ├── thing
 │   │   │   ├── device-setup.js
 │   │   │   ├── macro-assignment-container.js
 │   │   │   ├── menu.js
@@ -1736,26 +1736,26 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── mod-destination.js
 │   │   │   ├── packs-sidebar.js
 │   │   │   └── synth-editor.js
-│   │   ├── circuit-box.js
-│   │   ├── circuit-env-settings.js
-│   │   ├── circuit-eq-settings.js
-│   │   ├── circuit-filter-settings.js
-│   │   ├── circuit-fx-distortion.js
-│   │   ├── circuit-fx-settings.js
-│   │   ├── circuit-gen2
+│   │   ├── thing-box.js
+│   │   ├── thing-env-settings.js
+│   │   ├── thing-eq-settings.js
+│   │   ├── thing-filter-settings.js
+│   │   ├── thing-fx-distortion.js
+│   │   ├── thing-fx-settings.js
+│   │   ├── thing-gen2
 │   │   │   ├── select-entity.js
 │   │   │   └── send-set-to-device.js
-│   │   ├── circuit-lfo-settings.js
-│   │   ├── circuit-lfo-table-display.js
-│   │   ├── circuit-macro-controls.js
-│   │   ├── circuit-macro-settings.js
-│   │   ├── circuit-mixer-settings.js
-│   │   ├── circuit-mod-matrix-destination-icon.js
-│   │   ├── circuit-mod-matrix-source-icon.js
-│   │   ├── circuit-osc-settings.js
-│   │   ├── circuit-patch-chooser.js
-│   │   ├── circuit-rate-knob.js
-│   │   ├── circuit-rhythm
+│   │   ├── thing-lfo-settings.js
+│   │   ├── thing-lfo-table-display.js
+│   │   ├── thing-macro-controls.js
+│   │   ├── thing-macro-settings.js
+│   │   ├── thing-mixer-settings.js
+│   │   ├── thing-mod-matrix-destination-icon.js
+│   │   ├── thing-mod-matrix-source-icon.js
+│   │   ├── thing-osc-settings.js
+│   │   ├── thing-patch-chooser.js
+│   │   ├── thing-rate-knob.js
+│   │   ├── thing-rhythm
 │   │   │   ├── device-setup.js
 │   │   │   ├── get-pack.js
 │   │   │   ├── grid-effect-autofilter.js
@@ -1773,7 +1773,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── phaser-rate-knob.js
 │   │   │   ├── single-entity-content-transfer.js
 │   │   │   └── vinyl-filter-graph.js
-│   │   ├── circuit-tracks
+│   │   ├── thing-tracks
 │   │   │   ├── device-setup.js
 │   │   │   ├── get-pack.js
 │   │   │   ├── get-patch.js
@@ -1783,8 +1783,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── save-patch-dialog.js
 │   │   │   ├── session-compatibility-warning.js
 │   │   │   └── single-entity-content-transfer.js
-│   │   ├── circuit-voice-settings.js
-│   │   ├── circuit-wavetable-display.js
+│   │   ├── thing-voice-settings.js
+│   │   ├── thing-wavetable-display.js
 │   │   ├── color-picker-item.js
 │   │   ├── color-picker.js
 │   │   ├── color-picker-mobile.js
@@ -1826,21 +1826,21 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── knob.js
 │   │   ├── knob-svg.js
 │   │   ├── labelled-value.js
-│   │   ├── launch-control
+│   │   ├── emerge-control
 │   │   │   ├── template-select-modal.js
 │   │   │   └── template-settings.js
-│   │   ├── launch-control-button.js
-│   │   ├── launch-control-fader.js
-│   │   ├── launch-control-mk1
+│   │   ├── emerge-control-button.js
+│   │   ├── emerge-control-fader.js
+│   │   ├── emerge-control-mk1
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
-│   │   ├── launch-control-mk1.js
-│   │   ├── launch-control-pot.js
-│   │   ├── launch-control-xl-mk2
+│   │   ├── emerge-control-mk1.js
+│   │   ├── emerge-control-pot.js
+│   │   ├── emerge-control-xl-mk2
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
-│   │   ├── launch-control-xl-mk2.js
-│   │   ├── launchkey-mini-mk3
+│   │   ├── emerge-control-xl-mk2.js
+│   │   ├── someobj-mini-mk3
 │   │   │   ├── device-setup.js
 │   │   │   ├── display-reboot-message.js
 │   │   │   ├── menu.js
@@ -1851,7 +1851,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── reset-custom-mode-warning-modal.js
 │   │   │   ├── sustain-pedal.js
 │   │   │   └── template-editor.js
-│   │   ├── launchkey-mk3
+│   │   ├── someobj-mk3
 │   │   │   ├── control.js
 │   │   │   ├── custom-mode-control-settings.js
 │   │   │   ├── custom-mode-select.js
@@ -1863,24 +1863,24 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── pedal-settings.js
 │   │   │   ├── pots.js
 │   │   │   └── select-custom-mode-type.js
-│   │   ├── launchpad-global-settings.js
-│   │   ├── launchpad-grid.js
-│   │   ├── launchpad.js
-│   │   ├── launchpad-meta-object.js
-│   │   ├── launchpad-mini-mk3
+│   │   ├── otherobj-global-settings.js
+│   │   ├── otherobj-grid.js
+│   │   ├── otherobj.js
+│   │   ├── otherobj-meta-object.js
+│   │   ├── otherobj-mini-mk3
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
-│   │   ├── launchpad-mini-mk3.js
-│   │   ├── launchpad-pad.js
-│   │   ├── launchpad-project-settings.js
-│   │   ├── launchpad-pro-mk3
+│   │   ├── otherobj-mini-mk3.js
+│   │   ├── otherobj-pad.js
+│   │   ├── otherobj-project-settings.js
+│   │   ├── otherobj-pro-mk3
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
-│   │   ├── launchpad-pro-mk3.js
-│   │   ├── launchpad-pro-mk3-projects.js
-│   │   ├── launchpad-widget-browser.js
-│   │   ├── launchpad-widget.js
-│   │   ├── launchpad-widgets
+│   │   ├── otherobj-pro-mk3.js
+│   │   ├── otherobj-pro-mk3-projects.js
+│   │   ├── otherobj-widget-browser.js
+│   │   ├── otherobj-widget.js
+│   │   ├── otherobj-widgets
 │   │   │   ├── chromatic-keyboard.js
 │   │   │   ├── color-picker.js
 │   │   │   ├── control-change.js
@@ -1894,9 +1894,9 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── program-change.js
 │   │   │   ├── scale-keyboard.js
 │   │   │   └── scale-select.js
-│   │   ├── launchpad-widget-settings.js
-│   │   ├── launchpad-widgets.js
-│   │   ├── launchpad-x
+│   │   ├── otherobj-widget-settings.js
+│   │   ├── otherobj-widgets.js
+│   │   ├── otherobj-x
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
 │   │   ├── librarian
@@ -1999,7 +1999,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── start-firmware-svg.js
 │   │   ├── step-sequencer.js
 │   │   ├── sub-nav.js
-│   │   ├── summit
+│   │   ├── marine
 │   │   │   ├── device-setup.js
 │   │   │   └── menu.js
 │   │   ├── svg-text.js
@@ -2025,7 +2025,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── wave-thumb.js
 │   │   ├── web-midi-warning.js
 │   │   └── windows-troubleshooting-link.js
-│   ├── launch-control-mk1
+│   ├── emerge-control-mk1
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── templates
@@ -2033,8 +2033,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-mk1.js
-│   ├── launch-control-xl-mk2
+│   ├── emerge-control-mk1.js
+│   ├── emerge-control-xl-mk2
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── templates
@@ -2042,8 +2042,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── templates.js
-│   ├── launch-control-xl-mk2.js
-│   ├── launchkey-mini-mk3
+│   ├── emerge-control-xl-mk2.js
+│   ├── someobj-mini-mk3
 │   │   ├── custom-mode-editor
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -2052,8 +2052,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   └── index.js
-│   ├── launchkey-mini-mk3.js
-│   ├── launchkey-mk3
+│   ├── someobj-mini-mk3.js
+│   ├── someobj-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -2062,8 +2062,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   └── pedal.js
-│   ├── launchkey-mk3.js
-│   ├── launchpad-mini-mk3
+│   ├── someobj-mk3.js
+│   ├── otherobj-mini-mk3
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -2072,8 +2072,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-mini-mk3.js
-│   ├── launchpad-pro-mk3
+│   ├── otherobj-mini-mk3.js
+│   ├── otherobj-pro-mk3
 │   │   ├── custom-modes
 │   │   │   ├── factory-pack.js
 │   │   │   ├── index.js
@@ -2087,8 +2087,8 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── projects.js
-│   ├── launchpad-pro-mk3.js
-│   ├── launchpad-x
+│   ├── otherobj-pro-mk3.js
+│   ├── otherobj-x
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -2097,7 +2097,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── librarian.js
-│   ├── launchpad-x.js
+│   ├── otherobj-x.js
 │   ├── login-callback.js
 │   ├── monostation
 │   │   ├── factory-pack.js
@@ -2141,7 +2141,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   └── pack.js
 │   │   └── template-editor.js
 │   ├── sl-mkiii.js
-│   ├── summit
+│   ├── marine
 │   │   ├── firmware.js
 │   │   ├── help.js
 │   │   ├── index.js
@@ -2157,7 +2157,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   │   │   ├── index.js
 │   │   │   └── pack.js
 │   │   └── wavetable-editor.js
-│   ├── summit.js
+│   ├── marine.js
 │   └── welcome.js
 ├── torii-adapters
 │   ├── additional-login.js
@@ -2177,32 +2177,32 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 │   └── sysex.js
 ├── tutorials
 │   ├── bass-station-ii.js
-│   ├── circuit-editor.js
-│   ├── circuit.js
-│   ├── launch-control-mk1.js
-│   ├── launch-control-xl-mk2.js
-│   ├── launchkey-mini-mk3.js
-│   ├── launchkey-mk3.js
-│   ├── launchpad-mini-mk3.js
-│   ├── launchpad-x.js
+│   ├── thing-editor.js
+│   ├── thing.js
+│   ├── emerge-control-mk1.js
+│   ├── emerge-control-xl-mk2.js
+│   ├── someobj-mini-mk3.js
+│   ├── someobj-mk3.js
+│   ├── otherobj-mini-mk3.js
+│   ├── otherobj-x.js
 │   ├── monostation.js
 │   ├── peak.js
 │   ├── sl-mkiii-editor.js
 │   ├── sl-mkiii.js
-│   └── summit.js
+│   └── marine.js
 └── utils
     ├── array-eq.js
     ├── ascii-string-computed.js
     ├── bass-station-ii
-    │   ├── afx
+    │   ├── spf
     │   │   ├── create-proxy.js
     │   │   ├── drop-patch-task.js
     │   │   ├── extract-name-from-sysex.js
     │   │   └── send-overlay.js
-    │   ├── afx-mode.js
+    │   ├── spf-mode.js
     │   ├── convert-legacy-patch.js
     │   ├── drop-patch-task.js
-    │   └── validate-afx-overlay.js
+    │   └── validate-spf-overlay.js
     ├── binary-computed.js
     ├── binary-decorator.js
     ├── blob-to-node-buffer.js
@@ -2210,19 +2210,19 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     ├── check-manufacturer-id.js
     ├── check-state.js
     ├── chunk-sys-ex.js
-    ├── circuit-gen2
+    ├── thing-gen2
     │   └── get-pack-color.js
-    ├── circuit-patch-utils.js
-    ├── circuit-rhythm
+    ├── thing-patch-utils.js
+    ├── thing-rhythm
     │   ├── grid-effect-content-map.js
     │   └── validate-project-binary.js
-    ├── circuit-tracks
-    │   ├── is-circuit-digital-content.js
-    │   ├── is-circuit-digital-patchset.js
+    ├── thing-tracks
+    │   ├── is-thing-digital-content.js
+    │   ├── is-thing-digital-patchset.js
     │   ├── is-init-project.js
-    │   ├── migrate-circuit-pack.js
-    │   ├── migrate-circuit-sampleset.js
-    │   ├── migrate-circuit-session.js
+    │   ├── migrate-thing-pack.js
+    │   ├── migrate-thing-sampleset.js
+    │   ├── migrate-thing-session.js
     │   ├── patch-content-map.js
     │   ├── project-validator.js
     │   ├── validate-custom-mode-sysex.js
@@ -2246,13 +2246,13 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     ├── is-decendant.js
     ├── is-electron.js
     ├── is-promise.js
-    ├── launch-control-mk1
+    ├── emerge-control-mk1
     │   └── validate-template-sysex.js
-    ├── launch-control-xl-mk2
+    ├── emerge-control-xl-mk2
     │   └── validate-template-sysex.js
-    ├── launchkey-mk3
+    ├── someobj-mk3
     │   └── validate-custom-mode-sysex.js
-    ├── launchpad
+    ├── otherobj
     │   └── is-custom-mode.js
     ├── load-from-url.js
     ├── lowpass-filter.js
@@ -2277,11 +2277,11 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     ├── send-analytics.js
     ├── sl-mkiii
     │   └── content-transfer-message.js
-    ├── summit
+    ├── marine
     │   ├── convert-peak-patch.js
     │   ├── extract-patch-data.js
-    │   ├── is-summit-multi-patch.js
-    │   └── is-summit-patch.js
+    │   ├── is-marine-multi-patch.js
+    │   └── is-marine-patch.js
     ├── upload-file.js
     ├── wavetable-editor
     │   ├── create-wave.js
@@ -2291,7 +2291,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
 
 228 directories, 1723 files
 </code></pre></section></section><section><section><h2>Дальнейшие действия</h2></section><section><h2>Восстановление inline-констант</h2><pre><code>Skipping inlined numeric literal "25". Original value FULL_HEIGHT
-Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></section><section><h2>Восстановление TS-специфичных конструкций</h2><pre class="fragment"><code class="language-js" data-line-numbers="5|99-109|110-120|121-131">define("frontend/controllers/circuit-tracks/firmware", [
+Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></section><section><h2>Восстановление TS-специфичных конструкций</h2><pre class="fragment"><code class="language-js" data-line-numbers="5|99-109|110-120|121-131">define("frontend/controllers/a-name/firmware", [
   "exports",
   "frontend/constants/driver-links",
 ], function (_exports, _driverLinks) {
@@ -2359,14 +2359,14 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
     value: !0,
   }),
     (_exports.default = void 0);
-  let CircuitTracksFirmwareController =
-    ((_dec = Ember.inject.service("devices.circuit-tracks")),
+  let aNameFirmwareController =
+    ((_dec = Ember.inject.service("devices.a-name")),
     (_dec2 = Ember.inject.service),
-    (_dec3 = Ember.computed.bool("circuitTracks.firmwareVersion")),
+    (_dec3 = Ember.computed.bool("aName.firmwareVersion")),
     (_class = class extends Ember.Controller {
       constructor(...args) {
         super(...args),
-          _initializerDefineProperty(this, "circuitTracks", _descriptor, this),
+          _initializerDefineProperty(this, "aName", _descriptor, this),
           _initializerDefineProperty(this, "platform", _descriptor2, this),
           _defineProperty(this, "sendToMainApplication", !0),
           _defineProperty(this, "waitForDeviceConfirmation", !0),
@@ -2375,23 +2375,23 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
           _defineProperty(
             this,
             "deviceConfirmationText",
-            "Press the Play button on Circuit Tracks"
+            "Press the Play button on A Namge"
           ),
           _defineProperty(
             this,
             "confirmationSvg",
-            "circuit-tracks-line-drawing"
+            "a-name-line-drawing"
           ),
           _defineProperty(this, "listenForDeviceStatusReport", !0),
           _initializerDefineProperty(this, "hasVersions", _descriptor3, this);
       }
       get driverLink() {
-        if (this.platform.isWindows) return _driverLinks.circuitTracks;
+        if (this.platform.isWindows) return _driverLinks.aName;
       }
     }),
     (_descriptor = _applyDecoratedDescriptor(
       _class.prototype,
-      "circuitTracks",
+      "aName",
       [_dec],
       {
         configurable: !0,
@@ -2423,9 +2423,9 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
       }
     )),
     _class);
-  _exports.default = CircuitTracksFirmwareController;
+  _exports.default = aNameFirmwareController;
 });
-</code></pre></section><section><h2>Восстановление конструкций упаковщика</h2><pre><code class="language-js" data-line-numbers="65-67">define("frontend/controllers/circuit-tracks/firmware", [
+</code></pre></section><section><h2>Восстановление конструкций упаковщика</h2><pre><code class="language-js" data-line-numbers="65-67">define("frontend/controllers/a-name/firmware", [
   "exports",
   "frontend/constants/driver-links",
 ], function (_exports, _driverLinks) {
@@ -2493,14 +2493,14 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
     value: !0,
   }),
     (_exports.default = void 0);
-  let CircuitTracksFirmwareController =
-    ((_dec = Ember.inject.service("devices.circuit-tracks")),
+  let aNameFirmwareController =
+    ((_dec = Ember.inject.service("devices.a-name")),
     (_dec2 = Ember.inject.service),
-    (_dec3 = Ember.computed.bool("circuitTracks.firmwareVersion")),
+    (_dec3 = Ember.computed.bool("aName.firmwareVersion")),
     (_class = class extends Ember.Controller {
       constructor(...args) {
         super(...args),
-          _initializerDefineProperty(this, "circuitTracks", _descriptor, this),
+          _initializerDefineProperty(this, "aName", _descriptor, this),
           _initializerDefineProperty(this, "platform", _descriptor2, this),
           _defineProperty(this, "sendToMainApplication", !0),
           _defineProperty(this, "waitForDeviceConfirmation", !0),
@@ -2509,23 +2509,23 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
           _defineProperty(
             this,
             "deviceConfirmationText",
-            "Press the Play button on Circuit Tracks"
+            "Press the Play button on A Namge"
           ),
           _defineProperty(
             this,
             "confirmationSvg",
-            "circuit-tracks-line-drawing"
+            "a-name-line-drawing"
           ),
           _defineProperty(this, "listenForDeviceStatusReport", !0),
           _initializerDefineProperty(this, "hasVersions", _descriptor3, this);
       }
       get driverLink() {
-        if (this.platform.isWindows) return _driverLinks.circuitTracks;
+        if (this.platform.isWindows) return _driverLinks.aName;
       }
     }),
     (_descriptor = _applyDecoratedDescriptor(
       _class.prototype,
-      "circuitTracks",
+      "aName",
       [_dec],
       {
         configurable: !0,
@@ -2557,7 +2557,7 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
       }
     )),
     _class);
-  _exports.default = CircuitTracksFirmwareController;
+  _exports.default = aNameFirmwareController;
 });
 </code></pre></section></section><section><h2>Источники</h2><ul><li><a href="https://habr.com/ru/post/509250/">Source Maps: быстро и понятно - Habr, 2020</a></li></ul></section><section data-background-color="#f2f5f5" style="height: 100%"><h2>Эта презентация онлайн</h2><img src="presentation/assets/qr.svg" style="height: 80%"></section></div></div><script src="dist/reveal.js"></script><script src="plugin/notes/notes.js"></script><script src="plugin/zoom/zoom.js"></script><script src="plugin/menu/menu.js"></script><script src="plugin/highlight/highlight.js"></script><script>Reveal.initialize({
   hash: true,
@@ -2568,13 +2568,12 @@ Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></
   },
   multiplex: {
     // Example values. To generate your own, see the socket.io server instructions.
-    secret: '16529616488764864544', // null so the clients do not have control of the master presentation
+    secret: '', // null so the clients do not have control of the master presentation
     id: 'bd0e241aeaae44c1', // id, obtained from socket.io server
     url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
   },
   dependencies: [
     { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-    { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
     { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
   ],
   // Learn about plugins: https://revealjs.com/plugins/
