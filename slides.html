@@ -7,11 +7,11 @@
   margin: 0 5px 0 0;
 }
 </style><section data-background-color="#f2f5f5" style="height: 100%"><h1>Reverse-engineering of Javascript</h1><img src="presentation/assets/clew.png" style="position: absolute; top: 50%; right:-20%"><img src="presentation/assets/logo_black_png.png" style="position: absolute; bottom: 5%; left: 5%; width: 2in"><span style="position: absolute; bottom: 5%; margin-bottom: 20px; left: 45%">2022</span></section><section data-background-color="#f2f5f5"><h2>Обо мне</h2><div><img src="presentation/assets/avatar.jpg" style="border-radius: 50%"></div><div style="display: flex; justify-content: space-evenly; font-size: .75em;"><div class="column"><p>Руслан Панасюк</p><p>Team Lead</p></div><div class="column"><p><img src="presentation/assets/GitHub-Mark-64px.png"><a href="https://github.com/unrealsolver/">unrealsolver</a></p><p><img src="presentation/assets/icons8-telegram-app.svg"><a href="https://t.me/archaicpoetry">archaicpoetry</a></p><p><img src="presentation/assets/email-message-svgrepo-com.svg">ruslan.panasiuk@itechart-group.com</p></div></div></section><section><h2>Зачем и кому это нужно?</h2><h3 class="fragment fade-in">(Мне)</h3></section><section><h2>Девайс</h2><img src="presentation/assets/CircuitTrks-large.jpg"></section><section><section><h2>Браузер не тот, видите ли</h2><img src="presentation/assets/webmidi_not_supported.png"></section><section><pre><code>//about:settings
-dom.webmidi.enabled: true</code></pre><p>А почему? А потому...</p></section></section><section><h2>Пример минифицированного кода</h2><section><pre><code class="language-js">function sum(lvalue, rvalue) {
+dom.webmidi.enabled: true</code></pre><p>А почему? А потому...</p></section><section><h2>Техподдержка?</h2><p>«I've passed your feedback onto our product team. It may not be something they are interested in doing, but at least I have passed it onto them for their consideration.»</p><img class="fragment fade-up" style="transition-duration: 1s; margin-top: -130px; margin-right: 50%" src="presentation/assets/lenivec-crop.png"></section></section><section><h2>Посмотрим на исходники</h2><section><img src="presentation/assets/unminified_source.png"><p>☝ Тут оооочень длинная строка</p></section><section><img src="presentation/assets/source_not_found.png"><p>Оригинальных исходников нет, а жаль</p></section></section><section><h2>Как код становится нечитаемым?</h2><ul><li class="fragment">Конкатенация</li><li class="fragment">Минификация</li><li class="fragment">Компиляция / Транспиляция</li><li class="fragment">Обфускация</li></ul></section><section><section>Инструменты</section><section><h2>Prettier</h2><iframe src="https://prettier.io/" height="400px" width="95%"></iframe><a href="https://prettier.io/">https://prettier.io/</a></section><section><h2>UnminifyJS</h2><iframe src="https://unminify.com/" height="400px" width="95%"></iframe><a href="https://unminify.com/">https://unminify.com/</a></section><section><h2>de4js</h2><iframe src="https://lelinhtinh.github.io/de4js/" height="400px" width="95%"></iframe><a href="https://lelinhtinh.github.io/de4js/">https://lelinhtinh.github.io/de4js/</a></section><section><h2>js-beautify</h2><iframe src="https://beautifier.io/" height="400px" width="95%"></iframe><a href="https://beautifier.io/">https://beautifier.io/</a></section><section><h2>UnuglifyJS</h2><a href="https://github.com/eth-sri/UnuglifyJS">https://github.com/eth-sri/UnuglifyJS</a></section><section><h2>js-smr</h2><p>Это мой инструмент для восстановления имен по Source Map</p><a href="https://github.com/unrealsolver/js-smr">https://github.com/unrealsolver/js-smr</a></section></section><section><section><h2>Статистические модели</h2></section><section><h2>JSNice</h2><iframe src="presentation/assets/jsnice.png" height="400px" width="95%"></iframe><a href="http://www.jsnice.org/">http://www.jsnice.org/</a></section><section><h2>Nice2Predict</h2><iframe src="presentation/assets/nice2predict.png" height="400px" width="95%"></iframe><a href="http://nice2predict.org/">http://nice2predict.org/</a></section></section><section><h2>Пример минифицированного кода</h2><section><pre><code class="language-js">function sum(lvalue, rvalue) {
     return lvalue + rvalue;
 }
 console.log(sum(10, 20));</code></pre><pre><code class="language-js">function sum(n,o){return n+o}console.log(sum(10,20));
-//# sourceMappingURL=test.min.js.map</code></pre></section><section><iframe class="r-stretch" src="https://evanw.github.io/source-map-visualization/#OTEAZnVuY3Rpb24gc3VtKG4sbyl7cmV0dXJuIG4rb31jb25zb2xlLmxvZyhzdW0oMTAsMjApKTsKLy8jIHNvdXJjZU1hcHBpbmdVUkw9dGVzdC5taW4uanMubWFwCjIyMgB7CiAgInZlcnNpb24iOiAzLAogICJzb3VyY2VzIjogWwogICAgInRlc3QuanMiCiAgXSwKICAibmFtZXMiOiBbCiAgICAic3VtIiwKICAgICJsdmFsdWUiLAogICAgInJ2YWx1ZSIsCiAgICAiY29uc29sZSIsCiAgICAibG9nIgogIF0sCiAgIm1hcHBpbmdzIjogIkFBQUEsU0FBU0EsSUFBSUMsRUFBUUMsR0FDakIsT0FBT0QsRUFBU0MsRUFFcEJDLFFBQVFDLElBQUlKLElBQUksR0FBSSIKfQo="></iframe></section></section><section><h2>Особенности реверс-инжиниринга в JS</h2><section><img src="presentation/assets/unminified_source.png"></section><section><img src="presentation/assets/source_not_found.png"></section></section><section><section>Как код становится нечитаемым</section><section>Конкатенация</section><section>Минификация</section><section>Компиляция / Транспиляция</section><section>Обфускация</section></section><section><pre><samp style="font-size: 18px"><pre><font color="#586E75">nba-178-31a</font>@nba-178-31a <font color="#859900">~/d/reverse</font>&gt; <font color="#005FD7">wget</font> <font color="#00AFFF">https://▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒/assets/frontend-2c1f24873f9b5c1f02c2fef69c5ca324.</font><font color="#00AFAF">{</font><font color="#00AFFF">js</font><font color="#00AFAF">,</font><font color="#00AFFF">map</font><font color="#00AFAF">}</font>
+//# sourceMappingURL=test.min.js.map</code></pre></section><section><iframe class="r-stretch" src="https://evanw.github.io/source-map-visualization/#OTEAZnVuY3Rpb24gc3VtKG4sbyl7cmV0dXJuIG4rb31jb25zb2xlLmxvZyhzdW0oMTAsMjApKTsKLy8jIHNvdXJjZU1hcHBpbmdVUkw9dGVzdC5taW4uanMubWFwCjIyMgB7CiAgInZlcnNpb24iOiAzLAogICJzb3VyY2VzIjogWwogICAgInRlc3QuanMiCiAgXSwKICAibmFtZXMiOiBbCiAgICAic3VtIiwKICAgICJsdmFsdWUiLAogICAgInJ2YWx1ZSIsCiAgICAiY29uc29sZSIsCiAgICAibG9nIgogIF0sCiAgIm1hcHBpbmdzIjogIkFBQUEsU0FBU0EsSUFBSUMsRUFBUUMsR0FDakIsT0FBT0QsRUFBU0MsRUFFcEJDLFFBQVFDLElBQUlKLElBQUksR0FBSSIKfQo="></iframe></section></section><section><h2>Скачиваем js и map-file</h2><pre><samp style="font-size: 18px"><pre><font color="#586E75">nba-178-31a</font>@nba-178-31a <font color="#859900">~/d/reverse</font>&gt; <font color="#005FD7">wget</font> <font color="#00AFFF">https://▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒/assets/frontend-2c1f24873f9b5c1f02c2fef69c5ca324.</font><font color="#00AFAF">{</font><font color="#00AFFF">js</font><font color="#00AFAF">,</font><font color="#00AFFF">map</font><font color="#00AFAF">}</font>
 --2022-05-13 00:20:48--  https://▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒/assets/frontend-2c1f24873f9b5c1f02c2fef69c5ca324.js
 Resolving ▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒ (▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒)... ▒▒▒.▒▒▒.▒▒▒.▒▒▒
 Connecting to ▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒ (▒▒▒▒▒▒▒▒▒▒.▒▒▒▒▒▒▒▒.▒▒▒)|▒▒▒.▒▒▒.▒▒▒.▒▒▒|:443... connected.
@@ -37,7 +37,7 @@ FINISHED --2022-05-13 00:20:51--
 Total wall clock time: 3,5s
 Downloaded: 2 files, 4,8M in 1,7s (2,91 MB/s)
 <font color="#586E75">nba-178-31a</font>@nba-178-31a <font color="#859900">~/d/reverse</font>&gt; </pre>
-</samp></pre></section><section><section><h2>Sample content</h2><pre><code style="font-size: 16px">"use strict";define("frontend/adapters/-json-api",["exports","@ember-data/adapter
+</samp></pre></section><section><section><h2>Получаем такой файл...</h2><pre><code style="font-size: 16px">"use strict";define("frontend/adapters/-json-api",["exports","@ember-data/adapter
 /json-api"],(function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),Objec
 t.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})}))
 ,define("frontend/adapters/application",["exports","frontend/adapters/form-data",
@@ -117,10 +117,10 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     });
     e.default = r
 }))
-</code></pre><p>Осталось прочесть 59k строк</p></section><section><p>...и решить ребусы</p><pre><code class="language-js">var i, r, a, o, l, s, c, u, d, h, p, m, f, b, v, g, y, w; </code></pre></section></section><section><section>Простые эвристики<pre><code>void 0 -> undefined
+</code></pre><p>Осталось прочесть 59k строк</p></section><section><p>...и решить ребусы</p><pre><code class="language-js">var i, r, a, o, l, s, c, u, d, h, p, m, f, b, v, g, y, w; </code></pre></section></section><section><section><h2>Простые эвристики</h2><pre><code>void 0 -> undefined
 !1 -> false
 !0 -> true
-function -> =></code></pre><p>Но не стоит применять здесь Regular Expression, т.к. это не регулярная грамматика</p></section></section><section>Обратный процесс</section><section><section>Инструменты</section><section>Практически бесполезные</section><section><h2>Prettier</h2><iframe src="https://prettier.io/" height="400px" width="95%"></iframe><a href="https://prettier.io/">https://prettier.io/</a></section><section><h2>UnminifyJS</h2><iframe src="https://unminify.com/" height="400px" width="95%"></iframe><a href="https://unminify.com/">https://unminify.com/</a></section><section><h2>de4js</h2><iframe src="https://lelinhtinh.github.io/de4js/" height="400px" width="95%"></iframe><a href="https://lelinhtinh.github.io/de4js/">https://lelinhtinh.github.io/de4js/</a></section><section><h2>js-beautify</h2><iframe src="https://beautifier.io/" height="400px" width="95%"></iframe><a href="https://beautifier.io/">https://beautifier.io/</a></section><section><h2>UnuglifyJS</h2><a href="https://github.com/eth-sri/UnuglifyJS">https://github.com/eth-sri/UnuglifyJS</a></section></section><section>Статистические модели<section><h2>JSNice</h2><iframe src="http://www.jsnice.org/" height="400px" width="95%"></iframe><a href="http://www.jsnice.org/">http://www.jsnice.org/</a></section><section><h2>Nice2Predict</h2><iframe src="http://nice2predict.org/" height="400px" width="95%"></iframe><a href="http://nice2predict.org/">http://nice2predict.org/</a></section></section><section> <section>Методы</section><section>Source Maps</section><section>Структура Source Maps</section><section><p>Source Map</p><pre><code class="language-json" data-line-numbers="2|3-5|6-12|13">{
+function -> =></code></pre><p class="fragment fade-up">Но не стоит применять здесь Regular Expression, т.к. это не регулярная грамматика</p></section></section><section> <section><h1>Что нам может дать Source Map?</h1></section><section><h2>Структура Source Maps</h2><pre><code class="language-json" data-line-numbers="2|3-5|6-12|13">{
   "version": 3,
   "sources": [
     "test.js"
@@ -133,7 +133,7 @@ function -> =></code></pre><p>Но не стоит применять здесь
     "log"
   ],
   "mappings": "AAAA,SAASA,IAAIC,EAAQC,GACjB,OAAOD,EAASC,EAEpBC,QAAQC,IAAIJ,IAAI,GAAI"
-}</code></pre></section><section><p>Структура mappings</p><ul><li>номер столбца в сгенерированном файле</li><li>индекс исходника в «sources»</li><li>номер строки исходника</li><li>номер столбца исходника</li><li>индекс имени переменной/функции из списка «names»</li></ul></section><section><p>Как расшифровать Mappings? Использовать Base64/VLQ декодирование</p><pre><code>AAAA,SAASA,IAAIC,EAAQC,GACjB,OAAOD,EAASC,EAEpBC,QAAQC,IAAIJ,IAAI,GAAI</code></pre><p>После декодирования</p><pre><code>[0,0,0,0], [9,0,0,9,0], [4,0,0,4,1], [2,0,0,8,1], [3,0,1,-17], [7,0,0,7,-1], [2,0,0,9,1], [2,0,2,-20,1], [8,0,0,8,1], [4,0,0,4,-4], [4,0,0,4], [3,0,0,4]</code></pre></section><section><iframe class="r-stretch" src="https://evanw.github.io/source-map-visualization/#MTE4OAAvLyBpbmRleC50c3gKaW1wb3J0IHsgaCBhcyByLCBGcmFnbWVudCBhcyBzLCByZW5kZXIgYXMgYyB9IGZyb20gInByZWFjdCI7CgovLyBjb3VudGVyLnRzeAppbXBvcnQgeyBoIGFzIHQsIENvbXBvbmVudCBhcyBhIH0gZnJvbSAicHJlYWN0IjsKaW1wb3J0IHsgdXNlU3RhdGUgYXMgbCB9IGZyb20gInByZWFjdC9ob29rcyI7CnZhciBvID0gY2xhc3MgZXh0ZW5kcyBhIHsKICBjb25zdHJ1Y3RvcihlKSB7CiAgICBzdXBlcihlKTsKICAgIHRoaXMuc3RhdGUgPSB7IHZhbHVlOiAwIH07CiAgICB0aGlzLmluY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSArIDEgfSk7CiAgICB0aGlzLmRlY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSAtIDEgfSk7CiAgICB0aGlzLnN0YXRlLnZhbHVlID0gZS5pbml0aWFsVmFsdWU7CiAgfQogIHJlbmRlcigpIHsKICAgIHJldHVybiB0KCJkaXYiLCB7CiAgICAgIGNsYXNzOiAiY291bnRlciIKICAgIH0sIHQoImgxIiwgbnVsbCwgdGhpcy5wcm9wcy5sYWJlbCksIHQoInAiLCBudWxsLCB0KCJidXR0b24iLCB7CiAgICAgIG9uQ2xpY2s6IHRoaXMuZGVjcmVtZW50CiAgICB9LCAiLSIpLCAiICIsIHRoaXMuc3RhdGUudmFsdWUsICIgIiwgdCgiYnV0dG9uIiwgewogICAgICBvbkNsaWNrOiB0aGlzLmluY3JlbWVudAogICAgfSwgIisiKSkpOwogIH0KfSwgaSA9IChuKSA9PiB7CiAgbGV0IFtlLCB1XSA9IGwobi5pbml0aWFsVmFsdWUpOwogIHJldHVybiB0KCJkaXYiLCB7CiAgICBjbGFzczogImNvdW50ZXIiCiAgfSwgdCgiaDEiLCBudWxsLCBuLmxhYmVsKSwgdCgicCIsIG51bGwsIHQoImJ1dHRvbiIsIHsKICAgIG9uQ2xpY2s6ICgpID0+IHUoZSAtIDEpCiAgfSwgIi0iKSwgIiAiLCBlLCAiICIsIHQoImJ1dHRvbiIsIHsKICAgIG9uQ2xpY2s6ICgpID0+IHUoZSArIDEpCiAgfSwgIisiKSkpOwp9OwoKLy8gaW5kZXgudHN4CmMocihzLCBudWxsLCByKG8sIHsKICBsYWJlbDogIkNvdW50ZXIgMSIsCiAgaW5pdGlhbFZhbHVlOiAxMDAKfSksIHIoaSwgewogIGxhYmVsOiAiQ291bnRlciAyIiwKICBpbml0aWFsVmFsdWU6IDIwMAp9KSksIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyb290IikpOwovLyMgc291cmNlTWFwcGluZ1VSTD1leGFtcGxlLmpzLm1hcAoyNTA2AHsKICAidmVyc2lvbiI6IDMsCiAgInNvdXJjZXMiOiBbImluZGV4LnRzeCIsICJjb3VudGVyLnRzeCJdLAogICJzb3VyY2VzQ29udGVudCI6IFsiaW1wb3J0IHsgaCwgRnJhZ21lbnQsIHJlbmRlciB9IGZyb20gJ3ByZWFjdCdcbmltcG9ydCB7IENvdW50ZXJDbGFzcywgQ291bnRlckZ1bmN0aW9uIH0gZnJvbSAnLi9jb3VudGVyJ1xuXG5yZW5kZXIoXG4gIDw+XG4gICAgPENvdW50ZXJDbGFzcyBsYWJlbD1cIkNvdW50ZXIgMVwiIGluaXRpYWxWYWx1ZT17MTAwfSAvPlxuICAgIDxDb3VudGVyRnVuY3Rpb24gbGFiZWw9XCJDb3VudGVyIDJcIiBpbml0aWFsVmFsdWU9ezIwMH0gLz5cbiAgPC8+LFxuICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncm9vdCcpISxcbilcbiIsICJpbXBvcnQgeyBoLCBDb21wb25lbnQgfSBmcm9tICdwcmVhY3QnXG5pbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3ByZWFjdC9ob29rcydcblxuaW50ZXJmYWNlIENvdW50ZXJQcm9wcyB7XG4gIGxhYmVsOiBzdHJpbmdcbiAgaW5pdGlhbFZhbHVlOiBudW1iZXJcbn1cblxuaW50ZXJmYWNlIENvdW50ZXJTdGF0ZSB7XG4gIHZhbHVlOiBudW1iZXJcbn1cblxuZXhwb3J0IGNsYXNzIENvdW50ZXJDbGFzcyBleHRlbmRzIENvbXBvbmVudDxDb3VudGVyUHJvcHMsIENvdW50ZXJTdGF0ZT4ge1xuICBzdGF0ZTogQ291bnRlclN0YXRlID0geyB2YWx1ZTogMCB9XG5cbiAgY29uc3RydWN0b3IocHJvcHM6IENvdW50ZXJQcm9wcykge1xuICAgIHN1cGVyKHByb3BzKVxuICAgIHRoaXMuc3RhdGUudmFsdWUgPSBwcm9wcy5pbml0aWFsVmFsdWVcbiAgfVxuXG4gIGluY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSArIDEgfSlcbiAgZGVjcmVtZW50ID0gKCkgPT4gdGhpcy5zZXRTdGF0ZSh7IHZhbHVlOiB0aGlzLnN0YXRlLnZhbHVlIC0gMSB9KVxuXG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gPGRpdiBjbGFzcz1cImNvdW50ZXJcIj5cbiAgICAgIDxoMT57dGhpcy5wcm9wcy5sYWJlbH08L2gxPlxuICAgICAgPHA+XG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5kZWNyZW1lbnR9Pi08L2J1dHRvbj5cbiAgICAgICAgeycgJ31cbiAgICAgICAge3RoaXMuc3RhdGUudmFsdWV9XG4gICAgICAgIHsnICd9XG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5pbmNyZW1lbnR9Pis8L2J1dHRvbj5cbiAgICAgIDwvcD5cbiAgICA8L2Rpdj5cbiAgfVxufVxuXG5leHBvcnQgbGV0IENvdW50ZXJGdW5jdGlvbiA9IChwcm9wczogQ291bnRlclByb3BzKSA9PiB7XG4gIGxldCBbdmFsdWUsIHNldFZhbHVlXSA9IHVzZVN0YXRlKHByb3BzLmluaXRpYWxWYWx1ZSlcbiAgcmV0dXJuIDxkaXYgY2xhc3M9XCJjb3VudGVyXCI+XG4gICAgPGgxPntwcm9wcy5sYWJlbH08L2gxPlxuICAgIDxwPlxuICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRWYWx1ZSh2YWx1ZSAtIDEpfT4tPC9idXR0b24+XG4gICAgICB7JyAnfVxuICAgICAge3ZhbHVlfVxuICAgICAgeycgJ31cbiAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2V0VmFsdWUodmFsdWUgKyAxKX0+KzwvYnV0dG9uPlxuICAgIDwvcD5cbiAgPC9kaXY+XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUE7OztBQ0FBO0FBQ0E7QUFXTyxzQkFBMkIsRUFBc0M7QUFBQSxFQUd0RSxZQUFZLEdBQXFCO0FBQy9CLFVBQU07QUFIUixpQkFBc0IsRUFBRSxPQUFPO0FBTy9CLHFCQUFZLE1BQU0sS0FBSyxTQUFTLEVBQUUsT0FBTyxLQUFLLE1BQU0sUUFBUTtBQUM1RCxxQkFBWSxNQUFNLEtBQUssU0FBUyxFQUFFLE9BQU8sS0FBSyxNQUFNLFFBQVE7QUFKMUQsU0FBSyxNQUFNLFFBQVEsRUFBTTtBQUFBO0FBQUEsRUFNM0IsU0FBUztBQUNQLFdBQU8sRUFBQyxPQUFEO0FBQUEsTUFBSyxPQUFNO0FBQUEsT0FDaEIsRUFBQyxNQUFELE1BQUssS0FBSyxNQUFNLFFBQ2hCLEVBQUMsS0FBRCxNQUNFLEVBQUMsVUFBRDtBQUFBLE1BQVEsU0FBUyxLQUFLO0FBQUEsT0FBVyxNQUNoQyxLQUNBLEtBQUssTUFBTSxPQUNYLEtBQ0QsRUFBQyxVQUFEO0FBQUEsTUFBUSxTQUFTLEtBQUs7QUFBQSxPQUFXO0FBQUE7QUFBQSxHQU05QixJQUFrQixDQUFDLE1BQXdCO0FBQ3BELE1BQUksQ0FBQyxHQUFPLEtBQVksRUFBUyxFQUFNO0FBQ3ZDLFNBQU8sRUFBQyxPQUFEO0FBQUEsSUFBSyxPQUFNO0FBQUEsS0FDaEIsRUFBQyxNQUFELE1BQUssRUFBTSxRQUNYLEVBQUMsS0FBRCxNQUNFLEVBQUMsVUFBRDtBQUFBLElBQVEsU0FBUyxNQUFNLEVBQVMsSUFBUTtBQUFBLEtBQUksTUFDM0MsS0FDQSxHQUNBLEtBQ0QsRUFBQyxVQUFEO0FBQUEsSUFBUSxTQUFTLE1BQU0sRUFBUyxJQUFRO0FBQUEsS0FBSTtBQUFBOzs7QUQzQ2xELEVBQ0UsV0FDRSxFQUFDLEdBQUQ7QUFBQSxFQUFjLE9BQU07QUFBQSxFQUFZLGNBQWM7QUFBQSxJQUM5QyxFQUFDLEdBQUQ7QUFBQSxFQUFpQixPQUFNO0FBQUEsRUFBWSxjQUFjO0FBQUEsS0FFbkQsU0FBUyxlQUFlOyIsCiAgIm5hbWVzIjogW10KfQo="></iframe></section><section>Восстановление имен по Source Maps<p>используем names и mappings из source map</p></section><section><pre><code class="language-js">"use strict";
+}</code></pre></section><section><p>Как расшифровать Mappings? Использовать Base64/VLQ декодирование</p><pre><code>AAAA,SAASA,IAAIC,EAAQC,GACjB,OAAOD,EAASC,EAEpBC,QAAQC,IAAIJ,IAAI,GAAI</code></pre><p>После декодирования</p><pre><code>[0,0,0,0], [9,0,0,9,0], [4,0,0,4,1], [2,0,0,8,1], [3,0,1,-17], [7,0,0,7,-1], [2,0,0,9,1], [2,0,2,-20,1], [8,0,0,8,1], [4,0,0,4,-4], [4,0,0,4], [3,0,0,4]</code></pre></section><section><h2>Структура mappings</h2><ul><li class="fragment">номер столбца в сгенерированном файле</li><li class="fragment">индекс исходника в «sources»</li><li class="fragment">номер строки исходника</li><li class="fragment">номер столбца исходника</li><li class="fragment">индекс имени переменной/функции из списка «names»</li></ul></section><section><iframe class="r-stretch" src="https://evanw.github.io/source-map-visualization/#MTE4OAAvLyBpbmRleC50c3gKaW1wb3J0IHsgaCBhcyByLCBGcmFnbWVudCBhcyBzLCByZW5kZXIgYXMgYyB9IGZyb20gInByZWFjdCI7CgovLyBjb3VudGVyLnRzeAppbXBvcnQgeyBoIGFzIHQsIENvbXBvbmVudCBhcyBhIH0gZnJvbSAicHJlYWN0IjsKaW1wb3J0IHsgdXNlU3RhdGUgYXMgbCB9IGZyb20gInByZWFjdC9ob29rcyI7CnZhciBvID0gY2xhc3MgZXh0ZW5kcyBhIHsKICBjb25zdHJ1Y3RvcihlKSB7CiAgICBzdXBlcihlKTsKICAgIHRoaXMuc3RhdGUgPSB7IHZhbHVlOiAwIH07CiAgICB0aGlzLmluY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSArIDEgfSk7CiAgICB0aGlzLmRlY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSAtIDEgfSk7CiAgICB0aGlzLnN0YXRlLnZhbHVlID0gZS5pbml0aWFsVmFsdWU7CiAgfQogIHJlbmRlcigpIHsKICAgIHJldHVybiB0KCJkaXYiLCB7CiAgICAgIGNsYXNzOiAiY291bnRlciIKICAgIH0sIHQoImgxIiwgbnVsbCwgdGhpcy5wcm9wcy5sYWJlbCksIHQoInAiLCBudWxsLCB0KCJidXR0b24iLCB7CiAgICAgIG9uQ2xpY2s6IHRoaXMuZGVjcmVtZW50CiAgICB9LCAiLSIpLCAiICIsIHRoaXMuc3RhdGUudmFsdWUsICIgIiwgdCgiYnV0dG9uIiwgewogICAgICBvbkNsaWNrOiB0aGlzLmluY3JlbWVudAogICAgfSwgIisiKSkpOwogIH0KfSwgaSA9IChuKSA9PiB7CiAgbGV0IFtlLCB1XSA9IGwobi5pbml0aWFsVmFsdWUpOwogIHJldHVybiB0KCJkaXYiLCB7CiAgICBjbGFzczogImNvdW50ZXIiCiAgfSwgdCgiaDEiLCBudWxsLCBuLmxhYmVsKSwgdCgicCIsIG51bGwsIHQoImJ1dHRvbiIsIHsKICAgIG9uQ2xpY2s6ICgpID0+IHUoZSAtIDEpCiAgfSwgIi0iKSwgIiAiLCBlLCAiICIsIHQoImJ1dHRvbiIsIHsKICAgIG9uQ2xpY2s6ICgpID0+IHUoZSArIDEpCiAgfSwgIisiKSkpOwp9OwoKLy8gaW5kZXgudHN4CmMocihzLCBudWxsLCByKG8sIHsKICBsYWJlbDogIkNvdW50ZXIgMSIsCiAgaW5pdGlhbFZhbHVlOiAxMDAKfSksIHIoaSwgewogIGxhYmVsOiAiQ291bnRlciAyIiwKICBpbml0aWFsVmFsdWU6IDIwMAp9KSksIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyb290IikpOwovLyMgc291cmNlTWFwcGluZ1VSTD1leGFtcGxlLmpzLm1hcAoyNTA2AHsKICAidmVyc2lvbiI6IDMsCiAgInNvdXJjZXMiOiBbImluZGV4LnRzeCIsICJjb3VudGVyLnRzeCJdLAogICJzb3VyY2VzQ29udGVudCI6IFsiaW1wb3J0IHsgaCwgRnJhZ21lbnQsIHJlbmRlciB9IGZyb20gJ3ByZWFjdCdcbmltcG9ydCB7IENvdW50ZXJDbGFzcywgQ291bnRlckZ1bmN0aW9uIH0gZnJvbSAnLi9jb3VudGVyJ1xuXG5yZW5kZXIoXG4gIDw+XG4gICAgPENvdW50ZXJDbGFzcyBsYWJlbD1cIkNvdW50ZXIgMVwiIGluaXRpYWxWYWx1ZT17MTAwfSAvPlxuICAgIDxDb3VudGVyRnVuY3Rpb24gbGFiZWw9XCJDb3VudGVyIDJcIiBpbml0aWFsVmFsdWU9ezIwMH0gLz5cbiAgPC8+LFxuICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncm9vdCcpISxcbilcbiIsICJpbXBvcnQgeyBoLCBDb21wb25lbnQgfSBmcm9tICdwcmVhY3QnXG5pbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3ByZWFjdC9ob29rcydcblxuaW50ZXJmYWNlIENvdW50ZXJQcm9wcyB7XG4gIGxhYmVsOiBzdHJpbmdcbiAgaW5pdGlhbFZhbHVlOiBudW1iZXJcbn1cblxuaW50ZXJmYWNlIENvdW50ZXJTdGF0ZSB7XG4gIHZhbHVlOiBudW1iZXJcbn1cblxuZXhwb3J0IGNsYXNzIENvdW50ZXJDbGFzcyBleHRlbmRzIENvbXBvbmVudDxDb3VudGVyUHJvcHMsIENvdW50ZXJTdGF0ZT4ge1xuICBzdGF0ZTogQ291bnRlclN0YXRlID0geyB2YWx1ZTogMCB9XG5cbiAgY29uc3RydWN0b3IocHJvcHM6IENvdW50ZXJQcm9wcykge1xuICAgIHN1cGVyKHByb3BzKVxuICAgIHRoaXMuc3RhdGUudmFsdWUgPSBwcm9wcy5pbml0aWFsVmFsdWVcbiAgfVxuXG4gIGluY3JlbWVudCA9ICgpID0+IHRoaXMuc2V0U3RhdGUoeyB2YWx1ZTogdGhpcy5zdGF0ZS52YWx1ZSArIDEgfSlcbiAgZGVjcmVtZW50ID0gKCkgPT4gdGhpcy5zZXRTdGF0ZSh7IHZhbHVlOiB0aGlzLnN0YXRlLnZhbHVlIC0gMSB9KVxuXG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gPGRpdiBjbGFzcz1cImNvdW50ZXJcIj5cbiAgICAgIDxoMT57dGhpcy5wcm9wcy5sYWJlbH08L2gxPlxuICAgICAgPHA+XG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5kZWNyZW1lbnR9Pi08L2J1dHRvbj5cbiAgICAgICAgeycgJ31cbiAgICAgICAge3RoaXMuc3RhdGUudmFsdWV9XG4gICAgICAgIHsnICd9XG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5pbmNyZW1lbnR9Pis8L2J1dHRvbj5cbiAgICAgIDwvcD5cbiAgICA8L2Rpdj5cbiAgfVxufVxuXG5leHBvcnQgbGV0IENvdW50ZXJGdW5jdGlvbiA9IChwcm9wczogQ291bnRlclByb3BzKSA9PiB7XG4gIGxldCBbdmFsdWUsIHNldFZhbHVlXSA9IHVzZVN0YXRlKHByb3BzLmluaXRpYWxWYWx1ZSlcbiAgcmV0dXJuIDxkaXYgY2xhc3M9XCJjb3VudGVyXCI+XG4gICAgPGgxPntwcm9wcy5sYWJlbH08L2gxPlxuICAgIDxwPlxuICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRWYWx1ZSh2YWx1ZSAtIDEpfT4tPC9idXR0b24+XG4gICAgICB7JyAnfVxuICAgICAge3ZhbHVlfVxuICAgICAgeycgJ31cbiAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2V0VmFsdWUodmFsdWUgKyAxKX0+KzwvYnV0dG9uPlxuICAgIDwvcD5cbiAgPC9kaXY+XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUE7OztBQ0FBO0FBQ0E7QUFXTyxzQkFBMkIsRUFBc0M7QUFBQSxFQUd0RSxZQUFZLEdBQXFCO0FBQy9CLFVBQU07QUFIUixpQkFBc0IsRUFBRSxPQUFPO0FBTy9CLHFCQUFZLE1BQU0sS0FBSyxTQUFTLEVBQUUsT0FBTyxLQUFLLE1BQU0sUUFBUTtBQUM1RCxxQkFBWSxNQUFNLEtBQUssU0FBUyxFQUFFLE9BQU8sS0FBSyxNQUFNLFFBQVE7QUFKMUQsU0FBSyxNQUFNLFFBQVEsRUFBTTtBQUFBO0FBQUEsRUFNM0IsU0FBUztBQUNQLFdBQU8sRUFBQyxPQUFEO0FBQUEsTUFBSyxPQUFNO0FBQUEsT0FDaEIsRUFBQyxNQUFELE1BQUssS0FBSyxNQUFNLFFBQ2hCLEVBQUMsS0FBRCxNQUNFLEVBQUMsVUFBRDtBQUFBLE1BQVEsU0FBUyxLQUFLO0FBQUEsT0FBVyxNQUNoQyxLQUNBLEtBQUssTUFBTSxPQUNYLEtBQ0QsRUFBQyxVQUFEO0FBQUEsTUFBUSxTQUFTLEtBQUs7QUFBQSxPQUFXO0FBQUE7QUFBQSxHQU05QixJQUFrQixDQUFDLE1BQXdCO0FBQ3BELE1BQUksQ0FBQyxHQUFPLEtBQVksRUFBUyxFQUFNO0FBQ3ZDLFNBQU8sRUFBQyxPQUFEO0FBQUEsSUFBSyxPQUFNO0FBQUEsS0FDaEIsRUFBQyxNQUFELE1BQUssRUFBTSxRQUNYLEVBQUMsS0FBRCxNQUNFLEVBQUMsVUFBRDtBQUFBLElBQVEsU0FBUyxNQUFNLEVBQVMsSUFBUTtBQUFBLEtBQUksTUFDM0MsS0FDQSxHQUNBLEtBQ0QsRUFBQyxVQUFEO0FBQUEsSUFBUSxTQUFTLE1BQU0sRUFBUyxJQUFRO0FBQUEsS0FBSTtBQUFBOzs7QUQzQ2xELEVBQ0UsV0FDRSxFQUFDLEdBQUQ7QUFBQSxFQUFjLE9BQU07QUFBQSxFQUFZLGNBQWM7QUFBQSxJQUM5QyxFQUFDLEdBQUQ7QUFBQSxFQUFpQixPQUFNO0FBQUEsRUFBWSxjQUFjO0FBQUEsS0FFbkQsU0FBUyxlQUFlOyIsCiAgIm5hbWVzIjogW10KfQo="></iframe></section></section><section><h2>Восстановлениe имен</h2><p><a href="https://github.com/unrealsolver/js-smr">js-smr </a>в действии:</p><video autoplay controls><source src="presentation/assets/js-smr.webm" type="video/webm">Video is not supported</video></section><section><pre><code class="language-js">"use strict";
 define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"], (function (_exports, _jsonApi) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
@@ -212,7 +212,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     });
     _exports.default = _default
 }))
-</code></pre></section></section><section><section>Анализ AST</section><section>Трансформации на основе анализа AST</section><section>Разбиение на файлы<pre><code class="language-js" data-line-numbers="2|11|30|36|55">"use strict";
+</code></pre></section><section><section><h2>Анализ AST</h2></section><section><h2>Разбиение на файлы</h2><pre><code class="language-js" data-line-numbers="2|11|30|36|55">"use strict";
 define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"], (function (_exports, _jsonApi) {
     Object.defineProperty(_exports, "__esModule", {
         value: !0
@@ -291,7 +291,7 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     });
     _exports.default = _default
 }))
-</code></pre></section><section>Используем парсер Acorn и получим такой AST<pre><code class="language-json" data-line-numbers="2|7,15|20,24|29,36">{
+</code></pre></section><section><h2>Используем парсер Acorn и получим такой AST</h2><pre><code class="language-json" data-line-numbers="2|7,15|20,24|29,36">{
   "type": "Program",
   "start": 0,
   "end": 4366318,
@@ -2290,7 +2290,276 @@ define("frontend/adapters/-json-api", ["exports", "@ember-data/adapter/json-api"
     └── wav.js
 
 228 directories, 1723 files
-</code></pre></section></section><section><h2>Источники</h2><ul><li><a href="https://habr.com/ru/post/509250/">Source Maps: быстро и понятно - Habr, 2020</a></li></ul></section></div></div><script src="dist/reveal.js"></script><script src="plugin/notes/notes.js"></script><script src="plugin/zoom/zoom.js"></script><script src="plugin/menu/menu.js"></script><script src="plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+</code></pre></section></section><section><section><h2>Дальнейшие действия</h2></section><section><h2>Восстановление inline-констант</h2><pre><code>Skipping inlined numeric literal "25". Original value FULL_HEIGHT
+Skipping inlined numeric literal "58". Original value FULL_HEIGHT</code></pre></section><section><h2>Восстановление TS-специфичных конструкций</h2><pre class="fragment"><code class="language-js" data-line-numbers="5|99-109|110-120|121-131">define("frontend/controllers/circuit-tracks/firmware", [
+  "exports",
+  "frontend/constants/driver-links",
+], function (_exports, _driverLinks) {
+  var _dec, _dec2, _dec3, _class, _descriptor, _descriptor2, _descriptor3;
+
+  function _initializerDefineProperty(target, property, descriptor, context) {
+    descriptor &&
+      Object.defineProperty(target, property, {
+        enumerable: descriptor.enumerable,
+        configurable: descriptor.configurable,
+        writable: descriptor.writable,
+        value: descriptor.initializer
+          ? descriptor.initializer.call(context)
+          : void 0,
+      });
+  }
+
+  function _defineProperty(obj, key, value) {
+    return (
+      key in obj
+        ? Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+          })
+        : (obj[key] = value),
+      obj
+    );
+  }
+
+  function _applyDecoratedDescriptor(
+    target,
+    property,
+    decorators,
+    descriptor,
+    context
+  ) {
+    var desc = {};
+    return (
+      Object.keys(descriptor).forEach(function (key) {
+        desc[key] = descriptor[key];
+      }),
+      (desc.enumerable = !!desc.enumerable),
+      (desc.configurable = !!desc.configurable),
+      ("value" in desc || desc.initializer) && (desc.writable = !0),
+      (desc = decorators
+        .slice()
+        .reverse()
+        .reduce(function (desc, decorator) {
+          return decorator(target, property, desc) || desc;
+        }, desc)),
+      context &&
+        void 0 !== desc.initializer &&
+        ((desc.value = desc.initializer
+          ? desc.initializer.call(context)
+          : void 0),
+        (desc.initializer = void undefined)),
+      void 0 === desc.initializer &&
+        (Object.defineProperty(target, property, desc), (desc = null)),
+      desc
+    );
+  }
+  Object.defineProperty(_exports, "__esModule", {
+    value: !0,
+  }),
+    (_exports.default = void 0);
+  let CircuitTracksFirmwareController =
+    ((_dec = Ember.inject.service("devices.circuit-tracks")),
+    (_dec2 = Ember.inject.service),
+    (_dec3 = Ember.computed.bool("circuitTracks.firmwareVersion")),
+    (_class = class extends Ember.Controller {
+      constructor(...args) {
+        super(...args),
+          _initializerDefineProperty(this, "circuitTracks", _descriptor, this),
+          _initializerDefineProperty(this, "platform", _descriptor2, this),
+          _defineProperty(this, "sendToMainApplication", !0),
+          _defineProperty(this, "waitForDeviceConfirmation", !0),
+          _defineProperty(this, "firmwareConfirmationDelay", 3e3),
+          _defineProperty(this, "firmwareConfirmationTimeout", 23e3),
+          _defineProperty(
+            this,
+            "deviceConfirmationText",
+            "Press the Play button on Circuit Tracks"
+          ),
+          _defineProperty(
+            this,
+            "confirmationSvg",
+            "circuit-tracks-line-drawing"
+          ),
+          _defineProperty(this, "listenForDeviceStatusReport", !0),
+          _initializerDefineProperty(this, "hasVersions", _descriptor3, this);
+      }
+      get driverLink() {
+        if (this.platform.isWindows) return _driverLinks.circuitTracks;
+      }
+    }),
+    (_descriptor = _applyDecoratedDescriptor(
+      _class.prototype,
+      "circuitTracks",
+      [_dec],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    (_descriptor2 = _applyDecoratedDescriptor(
+      _class.prototype,
+      "platform",
+      [_dec2],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    (_descriptor3 = _applyDecoratedDescriptor(
+      _class.prototype,
+      "hasVersions",
+      [_dec3],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    _class);
+  _exports.default = CircuitTracksFirmwareController;
+});
+</code></pre></section><section><h2>Восстановление конструкций упаковщика</h2><pre><code class="language-js" data-line-numbers="65-67">define("frontend/controllers/circuit-tracks/firmware", [
+  "exports",
+  "frontend/constants/driver-links",
+], function (_exports, _driverLinks) {
+  var _dec, _dec2, _dec3, _class, _descriptor, _descriptor2, _descriptor3;
+
+  function _initializerDefineProperty(target, property, descriptor, context) {
+    descriptor &&
+      Object.defineProperty(target, property, {
+        enumerable: descriptor.enumerable,
+        configurable: descriptor.configurable,
+        writable: descriptor.writable,
+        value: descriptor.initializer
+          ? descriptor.initializer.call(context)
+          : void 0,
+      });
+  }
+
+  function _defineProperty(obj, key, value) {
+    return (
+      key in obj
+        ? Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+          })
+        : (obj[key] = value),
+      obj
+    );
+  }
+
+  function _applyDecoratedDescriptor(
+    target,
+    property,
+    decorators,
+    descriptor,
+    context
+  ) {
+    var desc = {};
+    return (
+      Object.keys(descriptor).forEach(function (key) {
+        desc[key] = descriptor[key];
+      }),
+      (desc.enumerable = !!desc.enumerable),
+      (desc.configurable = !!desc.configurable),
+      ("value" in desc || desc.initializer) && (desc.writable = !0),
+      (desc = decorators
+        .slice()
+        .reverse()
+        .reduce(function (desc, decorator) {
+          return decorator(target, property, desc) || desc;
+        }, desc)),
+      context &&
+        void 0 !== desc.initializer &&
+        ((desc.value = desc.initializer
+          ? desc.initializer.call(context)
+          : void 0),
+        (desc.initializer = void undefined)),
+      void 0 === desc.initializer &&
+        (Object.defineProperty(target, property, desc), (desc = null)),
+      desc
+    );
+  }
+  Object.defineProperty(_exports, "__esModule", {
+    value: !0,
+  }),
+    (_exports.default = void 0);
+  let CircuitTracksFirmwareController =
+    ((_dec = Ember.inject.service("devices.circuit-tracks")),
+    (_dec2 = Ember.inject.service),
+    (_dec3 = Ember.computed.bool("circuitTracks.firmwareVersion")),
+    (_class = class extends Ember.Controller {
+      constructor(...args) {
+        super(...args),
+          _initializerDefineProperty(this, "circuitTracks", _descriptor, this),
+          _initializerDefineProperty(this, "platform", _descriptor2, this),
+          _defineProperty(this, "sendToMainApplication", !0),
+          _defineProperty(this, "waitForDeviceConfirmation", !0),
+          _defineProperty(this, "firmwareConfirmationDelay", 3e3),
+          _defineProperty(this, "firmwareConfirmationTimeout", 23e3),
+          _defineProperty(
+            this,
+            "deviceConfirmationText",
+            "Press the Play button on Circuit Tracks"
+          ),
+          _defineProperty(
+            this,
+            "confirmationSvg",
+            "circuit-tracks-line-drawing"
+          ),
+          _defineProperty(this, "listenForDeviceStatusReport", !0),
+          _initializerDefineProperty(this, "hasVersions", _descriptor3, this);
+      }
+      get driverLink() {
+        if (this.platform.isWindows) return _driverLinks.circuitTracks;
+      }
+    }),
+    (_descriptor = _applyDecoratedDescriptor(
+      _class.prototype,
+      "circuitTracks",
+      [_dec],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    (_descriptor2 = _applyDecoratedDescriptor(
+      _class.prototype,
+      "platform",
+      [_dec2],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    (_descriptor3 = _applyDecoratedDescriptor(
+      _class.prototype,
+      "hasVersions",
+      [_dec3],
+      {
+        configurable: !0,
+        enumerable: !0,
+        writable: !0,
+        initializer: null,
+      }
+    )),
+    _class);
+  _exports.default = CircuitTracksFirmwareController;
+});
+</code></pre></section></section><section><h2>Источники</h2><ul><li><a href="https://habr.com/ru/post/509250/">Source Maps: быстро и понятно - Habr, 2020</a></li></ul></section><section data-background-color="#f2f5f5" style="height: 100%"><h2>Эта презентация онлайн</h2><img src="presentation/assets/qr.svg" style="height: 80%"></section></div></div><script src="dist/reveal.js"></script><script src="plugin/notes/notes.js"></script><script src="plugin/zoom/zoom.js"></script><script src="plugin/menu/menu.js"></script><script src="plugin/highlight/highlight.js"></script><script>Reveal.initialize({
   hash: true,
   slideNumber: "c",
   menu: {
