@@ -1,11 +1,10 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>JS Functions</title><link rel="stylesheet" href="dist/reset.css"><link rel="stylesheet" href="dist/reveal.css"><link id="theme" rel="stylesheet" href="dist/theme/league.css"><link rel="stylesheet" href="plugin/highlight/monokai.css"><link rel="stylesheet" href="plugin/menu/menu.css"><link rel="icon" type="image/x-icon" href="./jsfav.ico"><body><div class="reveal"><div class="slides"><section><h1>JS Functions</h1></section><section>Что такое функция<section><h3>Из чего состоит функция</h3><pre><code class="language-js">function Fn(a, b) {
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>JS Functions</title><link rel="stylesheet" href="dist/reset.css"><link rel="stylesheet" href="dist/reveal.css"><link id="theme" rel="stylesheet" href="dist/theme/night.css"><link rel="stylesheet" href="plugin/highlight/monokai.css"><link rel="stylesheet" href="plugin/menu/menu.css"><link rel="icon" type="image/x-icon" href="./jsfav.ico"><body><div class="reveal"><div class="slides"><section><h1>JS Functions</h1></section><section>Что такое функция<section><h3>Из чего состоит функция</h3><pre><code class="language-js">function Fn(a, b) {
   return a + b
-}</code></pre><ul><li>Сигнатура</li><li>Тело</li><li>return</li></ul></section><section><h3>Как это работает в JS</h3><ul><li>Все переменные функции ограничены этой функцией (scope)</li><li>return завершает выполнение и возвращает значение</li><li>если return нет, после выполнения вернет undefined</li></ul></section><section><h3>Hoisting</h3><p>Функции, как и переменные, объявленные через var
+}</code></pre><ul><li>Сигнатура</li><li>(аргументы)</li><li>Тело</li><li>(return)</li></ul></section><section><h3>Как это работает в JS</h3><ul><li>Все переменные функции ограничены этой функцией (scope)</li><li>return завершает выполнение и возвращает значение</li><li>если return нет, после выполнения вернет undefined</li></ul></section><section><h3>Hoisting</h3><p>Функции, как и переменные, объявленные через var
 будут доступны сразу во всей области видимости:</p><pre><code class="language-js">Fn(5, 4) // OK, 9
 function Fn(a, b) {
   return a + b
-}
-</code></pre></section></section><section><section><h2>Функция - это Объект</h2></section><section><h3>Методы и свойства объекта-функции</h3><pre><code class="language-js">const alias = Fn
+}</code></pre></section></section><section><section><h2>Функция - это Объект</h2></section><section><h3>Методы и свойства объекта-функции</h3><pre><code class="language-js">const alias = Fn
 console.log(alias)
 Fn.valueOf()</code></pre></section><section><h3>Метод toString</h3><p>Вернет исходный код функции</p><pre><code class="language-js">Fn.toString() // function Fn(a, b) { return a + b }</code></pre></section><section><h3>Вызов функции</h3><pre><code class="language-js">Fn(3, 4)</code></pre></section><section><h3>Способы объявления функций</h3><pre><code class="language-js">// Именованная
 function named(arg) {
@@ -28,7 +27,16 @@ function(arg) {
 (arg1, arg2) => arg1 + arg2
 (arg1, arg2) => {
   return arg1 + arg2
-}</code></pre></section><section>Функция - это выражение<pre><code class="language-js">let fn1 = function named() {}
+}</code></pre></section><section>Переменное количество аргументов<p>Если не известно заранее, как в случае с console.log(),
+который принимает любое количество аргументов.</p><p>Поможет 'секретный' объект 'arguments'</p><pre><code class="language-js">function varArg() {
+  console.log(arguments.length)
+  console.log(arguments[0])
+}
+varArg(1, 2, 3, 4)
+// 4
+// 1</code></pre></section><section>Подробнее про arguments<p>arguments это не массив, а похожий на массив объект.
+Методы массива с ним не работают. Но это легко исправить:</p><pre><code class="language-js">const args = Array.from(arguments)
+</code></pre></section><section>Функция - это выражение<pre><code class="language-js">let fn1 = function named() {}
 let fn2 = function() {}
 let fn3 = () => {}</code></pre></section><section><h3>Callback - функция обратного вызова</h3><pre><code class="language-js">const inner = function() {
   return "Inner value"
@@ -44,7 +52,9 @@ outer(inner) // Inner value</code></pre></section><section><h3>Callback - при
   }
 }
 fs.readFile("data.txt", cb)
-</code></pre></section><section><h3>Вызов с new и без</h3><p>Отвечает за то, как будет инициализирован this</p><p>Без new, this будет ссылаться на global (window)</p><p>С new</p><ul><li>будет ссылаться на новый объект (инстанс класса Fn)</li><li>Возвращаемым значением будет всегда this</li></ul><pre><code class="language-js">new Fn(3, 4)</code></pre></section><section><h3>Метод bind</h3><p>Позволяет создать функцию с заданным контекстом вызова</p><p>Используется во вложенных функциях, чтобы привязать this дочерней функции к this родительской</p><pre><code class="language-js">function f() { return this }
+</code></pre></section><section><h3>Вызов с new и без</h3><p>Отвечает за то, как будет инициализирован this.
+Без new, this будет ссылаться на global (window).
+А с new:</p><ul><li>будет ссылаться на новый объект (инстанс класса Fn)</li><li>Возвращаемым значением будет всегда this</li></ul><pre><code class="language-js">new Fn(3, 4)</code></pre></section><section><h3>Метод bind</h3><p>Позволяет создать функцию с заданным контекстом вызова</p><p>Используется во вложенных функциях, чтобы привязать this дочерней функции к this родительской</p><pre><code class="language-js">function f() { return this }
 f() // Window
 const bound = myLog.bind(document)
 bound() // HTMLDocuemnt</code></pre></section><section><h3>Метод call</h3><p>Как bind, но с аргументами и сразу делает вызов</p><p>Как правило, используется как более удобная и короткая запись через bind</p><pre><code class="language-js">function f(a, b) { return this }
